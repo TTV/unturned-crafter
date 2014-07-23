@@ -3,11 +3,11 @@
 // (C)TTV 2014
 // --------------------------------------------
 // ToDo...
-// translation
+// translation & rip images
 
 var unturned = {
 
-	version: "1.1",
+	version: "1.1.1",
 	ut_version: "2.1.7",
 
 	items: [],
