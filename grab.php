@@ -3,6 +3,9 @@
 // perhaps from here too...
 //   http://steamcommunity.com/sharedfiles/filedetails/?id=287691451
 
+set_time_limit(0);
+ob_start();
+
 $base = "http://unturned-bunker.wikia.com/wiki/";
 
 $pages = array(
@@ -190,10 +193,11 @@ $pages = array(
 foreach ($pages as $p){
 	$url = $base . $p;
 	$url = str_replace(" ", "_", $url);
-	echo "<a href='" . $url . "'>" . $p . "</a><br />";
-	$html = @file_get_contents($url);
+	//echo "<a href='" . $url . "'>" . $p . "</a><br />";
+	$html = get_data($url);
 	if ($html === false)
-		echo "cannot read page<br />";
+		//echo "cannot read page<br />";
+		echo "";
 	else {
 		$done = false;
 		do {
@@ -211,16 +215,38 @@ foreach ($pages as $p){
 						$i = strpos($s, ">");
 						if ($i !== false){
 							$s = substr($s, 0, $i + 1);
-							echo $s . "<br />";
+
+							preg_match('#<img.*?(http://.*?\.(jpg|png|gif|jpeg))#', $s, $matches);
+							$img = get_data($matches[1]);
+							$img_name = basename($matches[1]);
+							file_put_contents(dirname(__FILE__) . "/grabs/" . $img_name, $img);
+
+							echo "Saved figure(s) of " . $p . "<br />";
+
 							$done = true;
 						}
 					}
 				}
 			}
 			if (!$done)
-				echo "cannot find figure<br />";
+				echo "Cannot find figure of " . $p . "<br />";
+			ob_flush();
 		} while ($i !== false);
 	}
+}
+
+ob_end_flush();
+
+/* Curl to speed up grabbing */
+function get_data($url) {
+	$ch = curl_init();
+	$timeout = 5;
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
+	$data = curl_exec($ch);
+	curl_close($ch);
+	return $data;
 }
 
 ?>
