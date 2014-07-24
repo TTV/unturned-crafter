@@ -200,6 +200,7 @@ foreach ($pages as $p){
 		echo "";
 	else {
 		$done = false;
+		$pic_no = 0;
 		do {
 			$i = strpos($html, "image-thumbnail");
 			if ($i !== false){
@@ -219,7 +220,8 @@ foreach ($pages as $p){
 							preg_match('#<img.*?(http://.*?\.(jpg|png|gif|jpeg))#', $s, $matches);
 							$img = get_data($matches[1]);
 							$img_name = basename($matches[1]);
-							file_put_contents(dirname(__FILE__) . "/grabs/" . $img_name, $img);
+							file_put_contents(dirname(__FILE__) . "/grabs/" . strtolower($p) . ($pic_no > 0 ? "_" . $pic_no : "") . "." . pathinfo($img_name, PATHINFO_EXTENSION) /* $img_name */, $img);
+							$pic_no++;
 
 							echo "Saved figure(s) of " . $p . "<br />";
 
