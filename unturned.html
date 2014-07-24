@@ -113,6 +113,11 @@ a:hover{
 	flex-grow: 1;
 	overflow: auto;
 }
+#contents{
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+}
 #output_wrap{
 	flex-grow: 1;
 	overflow: auto;
@@ -180,8 +185,13 @@ a:hover{
 				<input type="checkbox" id="show_imgs"><label for="show_imgs">Show Images<sup>*</sup></label>
 			</div>
 		</div>
-		<div id="output_wrap">
-			<canvas id="output" width="16" height="16"></canvas>
+		<div id="contents">
+			<div id="output_wrap">
+				<canvas id="output" width="16" height="16"></canvas>
+			</div>
+			<div id="output_foot">
+				<!-- footer at bottom of main content area -->
+			</div>
 		</div>
 	</div>
 	<div class="footer"><sup>*</sup>Images are an on-going project, please be patient ;-) Peace</div>
