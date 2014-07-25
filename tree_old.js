@@ -199,7 +199,7 @@ var unturned = {
 
 	draw: function($canvas, itemName, itemCnt, settings){
 		var unturned = this;
-		var font_height = 16;
+		var font_height = 15;
 		var sub_gap_x = 12;
 		var box_padding = 2;
 		var bg_padding = 4;
@@ -221,12 +221,10 @@ var unturned = {
 			var nodeTxt = typeof itemName == "string" ? itemName : itemName.name;
 			var tsz = ctx.measureText(nodeTxt);
 			var content_w = (settings.show_resources && resource_sz > tsz.width) ? resource_sz : tsz.width ;
-			if (content_w % 2 != 0)
-				content_w++;
 			var sz = {
 				w : (content_w + 2 + (box_padding * 2)),
 				h: font_height + (settings.show_resources ? resource_sz : 0) + 2 + (box_padding * 2)
-			};
+			};  // 6 = 2*border + 2*pad(2)
 			var mulWidth = 0;
 			var mulTxt = "";
 			if (!tool){
@@ -235,7 +233,7 @@ var unturned = {
 				mulWidth = msz.width + (box_padding * 2) + 1;
 				sz.w += mulWidth;
 			}
-			var y_join_gap = sz.h / 2;
+			var y_join_gap = Math.floor(sz.h / 2);
 			if (tool)
 				ctx.fillStyle = "rgb(172, 150, 124)";
 			else
@@ -335,8 +333,8 @@ var unturned = {
 					itm_cnt = itm.count; // show count on root node
 			}
 			var sz2 = drawItem(ctx, itm, {x: bg_padding, y: yy}, itm_cnt);
-			sz2.w += bg_padding * 2 + 2;
-			sz2.h += bg_padding * 2 + 2;
+			sz2.w += bg_padding * 2 + 1;
+			sz2.h += bg_padding * 2 + 1;
 			if (sz2.w > sz.w)
 				sz.w = sz2.w;
 			sz.h += sz2.h + bg_padding;
@@ -346,7 +344,6 @@ var unturned = {
 			// resize
 			$canvas.attr("width", sz.w);
 			$canvas.attr("height", sz.h);
-			$canvas.width(sz.w).height(sz.h);
 			this.draw($canvas, itemName, itemCnt, settings);
 		}
 	},
