@@ -1,5 +1,4 @@
 missing: animal pants.png
-
 missing: pink berry.png
 missing: green berry.png
 missing: crushed red berry.png
@@ -8,14 +7,10 @@ missing: crushed pink berry.png
 missing: crushed pale berry.png
 missing: crushed green berry.png
 missing: crushed purple berry.png
-
 missing: raw bacon.png
-missing: cooked venison.png
 missing: cooked bacon.png
-
 missing: tracer bullets.png
 missing: shell.png
-missing: frag grenade.png
 missing: nato magazine.png
 missing: nato drum.png
 missing: lebel magazine.png
@@ -23,7 +18,6 @@ missing: nato tracer magazine.png
 missing: savage drum.png
 missing: lapua magazine.png
 missing: lapua tracer magazine.png
-missing: yuri magazine.png
 missing: xtrmin magazine.png
 missing: full nato magazine.png
 missing: full nato drum.png
@@ -33,9 +27,7 @@ missing: full savage magazine.png
 missing: full savage drum.png
 missing: full lapua magazine.png
 missing: full lapua tracer magazine.png
-missing: full yuri magazine.png
 missing: full xtrmin magazine.png
-
 missing: stone plate.png
 missing: stone support.png
 missing: stone frame.png
@@ -49,9 +41,7 @@ missing: stone doorway.png
 missing: stone window.png
 missing: stone pillar.png
 missing: stone garage.png
-
 missing: wood garage door.png
-
 missing: electric trap.png
 missing: moab.png
 missing: tripmine.png
@@ -62,9 +52,7 @@ missing: wire fence.png
 missing: metal door.png
 missing: metal shutter.png
 missing: metal garage door.png
-
 missing: splint.png
-
 missing: tactical light.png
 missing: muffler.png
 missing: zoomomatic.png
