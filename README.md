@@ -13,7 +13,7 @@ Just double click "unturned.html"
 
 Options
 -------
-If a particular language is supported (by translation.js), you can view the guild in that language via the language URL parameter...
+If a particular language is supported (by translation.js), you can view the guide in that language via the "language" URL parameter...
 e.g. unturned.html?language=es
 
 Hosted
