@@ -3,12 +3,15 @@
 // (C)TTV 2014
 // --------------------------------------------
 // ToDo...
-// translation & rip images
+// item shopping lists
 
 var unturned = {
 
-	version: "1.1.2",
+	version: "1.2.2",
 	ut_version: "2.1.8",
+
+	language: "en",
+	translationErrors: "none",
 
 	items: [],
 
@@ -80,13 +83,14 @@ var unturned = {
 	addContextInfo: null,
 
 	setAddContext: function(contextName){
+		contextName = this.translate(contextName);
 		this.contexts.push(contextName);
 		this.addContextInfo = contextName;
 	},
 
 	addItem: function(name, createCount, reqArr, imgOffset, minLvl){
 		var itm = {
-			name: name.toLowerCase(),
+			name: this.translate(name.toLowerCase()),
 			count: createCount,
 			context: this.addContextInfo,
 			req: [],
@@ -108,6 +112,7 @@ var unturned = {
 			var tl = this.findTool(i2);
 			if (tl && (cnt > 1))
 				alert("Cannot have multiple tools on [" + name + "]");
+			i2 = this.translate(i2);
 			if (tl)
 				itm.tool = i2;
 			else
@@ -139,6 +144,24 @@ var unturned = {
 			$("<option value='" + itm.name + "'>" + itm.name + "</option>")
 				.appendTo($sel);
 		}
+	},
+
+	untranslated: [],
+
+	translate: function(enString){
+		for (var c = 0; c < translation.items.length; c++)
+			if (translation.items[c].name == enString){
+				if (translation.items[c].hasOwnProperty(this.language))
+					return translation.items[c][this.language];
+				// valid term but unsupported language!
+				if ($.inArray(enString, this.untranslated) == -1)
+					this.untranslated.push(enString);
+				return enString;
+			}
+		// unknown term
+		if ($.inArray(enString, this.untranslated) == -1)
+			this.untranslated.push(enString);
+		return enString;
 	},
 
 	getJStreeStruct: function(){
@@ -239,7 +262,7 @@ var unturned = {
 			if (tool)
 				ctx.fillStyle = "rgb(172, 150, 124)";
 			else
-				ctx.fillStyle = "#eee";
+				ctx.fillStyle = "#eef";
 			ctx.fillRect(pos.x, pos.y, sz.w, sz.h);
 			ctx.strokeStyle = "rgb(105, 96, 81)";
 			ctx.strokeRect(pos.x, pos.y, sz.w, sz.h);
@@ -367,6 +390,20 @@ var unturned = {
 	},
 
 	setup: function(){
+		var c;
+		// rip language from url
+		var query = window.location.search.substring(1);
+		var vars = query.split("&");
+		for (var c = 0; c < vars.length; c++) {
+    		var pair = vars[c].split("=");
+			if (pair[0].toLowerCase() == "language")
+				this.language = $.trim(pair[1].toLowerCase());
+		} 
+		// translate tools & atomics
+		for (c = 0; c < this.tools.length; c++)
+			this.tools[c].name = this.translate(this.tools[c].name);
+		for (c = 0; c < this.atomic.length; c++)
+			this.atomic[c].name = this.translate(this.atomic[c].name);
 		// from  http://unturned-bunker.wikia.com/wiki/Crafting_Recipes
 		// any source item (tool or element) without a constuctor must be atomic (log, branch, rock, cloth, can, construction helmet, torch etc.)
 		// todo : some items can also be sporned (stick, board, nail, bolt)
@@ -517,6 +554,30 @@ var unturned = {
 		this.addItem("canteen", 1, ["1*can", "1*bottled water"], 0x1500);
 		this.addItem("frag grenade", 1, ["3*nail", "1*raw explosive"], 0x1520, 1);  // (requires level 1 craftsman or higher)
 		this.addItem("car jack", 1, ["1*sledge hammer", "4*scrap metal"], 0x1540);
+
+		// handle missing translations
+		if (this.untranslated.length > 0){
+			var s;
+			switch (this.translationErrors){
+				case "show":
+					s = "There were problems with translating the following...<br/>";
+					for (c = 0; c < this.untranslated.length; c++)
+						s += this.untranslated[c] + "<br>";
+					$("#output_foot").html(s).height(200);
+					break;
+				case "code":
+					s = "var translation = {\n" +
+						"\titems: [\n";
+					for (c = 0; c < this.untranslated.length; c++)
+						s += "\t\t{\n\t\t\tname: \"" + this.untranslated[c] + "\",\n" +
+							"\t\t\ten: \"" + this.untranslated[c].substr(0, 1).toUpperCase() + this.untranslated[c].substr(1) + "\"\n" +
+							"\t\t},\n";
+					s += "\t]\n};";
+					$("#output_foot").html(s).height(200);
+					break;
+			}
+
+		}
 	}
 
 };

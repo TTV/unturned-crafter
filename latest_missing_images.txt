@@ -23,7 +23,6 @@ missing: full nato magazine.png
 missing: full nato drum.png
 missing: full lebel magazine.png
 missing: full nato tracer magazine.png
-missing: full savage magazine.png
 missing: full savage drum.png
 missing: full lapua magazine.png
 missing: full lapua tracer magazine.png

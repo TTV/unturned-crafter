@@ -6,8 +6,12 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="jstree.min.js" type="text/javascript"></script>
 <script src="tree.js" type="text/javascript"></script>
+<script src="translation.js" type="text/javascript"></script>
 <script>
 	$(function(){
+		// n.b. on the URL, you can specify "unturned.html?language=<code>" to display in another language (supported by translation.js)
+		// e.g. to display spanish would be "unturned.html?language=es"
+		unturned.translationErrors = "none"; // set to "show" to display untranslated words
 		unturned.setup();
 		$("#unturned_ver").html(unturned.ut_version);
 		$("#utcrafter_ver").html(unturned.version);
@@ -122,6 +126,9 @@ a:hover{
 	flex-grow: 1;
 	overflow: auto;
 	background-color: rgb(132, 159, 170);
+}
+#output_foot{
+	overflow: auto;
 }
 .unturn_header{
 	background-color: rgb(41, 22, 8);
