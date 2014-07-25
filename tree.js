@@ -74,7 +74,7 @@ var unturned = {
 		{name: "yuri magazine", imgXoffset: 0x680},
 		{name: "xtrmin magazine", imgXoffset: 0x6a0},
 		{name: "pdw magazine", imgXoffset: 0x6c0},
-		{name: "shell", imgXoffset: 0x6e0},
+		{name: "shells", imgXoffset: 0x6e0},
 		{name: "vitamins", imgXoffset: 0x700}
 	],
 
@@ -540,8 +540,8 @@ var unturned = {
 		this.addItem("full xtrmin magazine", 1, ["1*civilian bullets", "1*xtrmin magazine"], 0x13c0);
 		this.addItem("full pdw magazine", 1, ["2*military bullets", "1*pdw magazine"], 0x13e0);
 		this.addItem("arrow", 3, ["1*stick", "1*nail"], 0x1400);
-		this.addItem("buckshot", 6, ["1*shell", "2*nail"], 0x1420);
-		this.addItem("slug", 6, ["1*shell", "2*bolt"], 0x1440);
+		this.addItem("buckshot", 6, ["1*shells", "2*nail"], 0x1420);
+		this.addItem("slug", 6, ["1*shells", "2*bolt"], 0x1440);
 		// Attatchments
 		this.setAddContext("attachments");
 		this.addItem("tactical light", 1, ["1*handlamp", "2*duct tape"], 0x1460);

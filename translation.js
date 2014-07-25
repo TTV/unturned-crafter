@@ -249,8 +249,8 @@ var translation = {
 			en: "Pdw magazine"
 		},
 		{
-			name: "shell",
-			en: "Shell"
+			name: "shells",
+			en: "Shells"
 		},
 		{
 			name: "vitamins",

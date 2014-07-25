@@ -10,7 +10,6 @@ missing: crushed purple berry.png
 missing: raw bacon.png
 missing: cooked bacon.png
 missing: tracer bullets.png
-missing: shell.png
 missing: nato magazine.png
 missing: nato drum.png
 missing: lebel magazine.png
