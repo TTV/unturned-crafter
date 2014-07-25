@@ -1,0 +1,89 @@
+missing: animal pants.png
+missing: raw explosive.png
+missing: moldy corn.png
+missing: pink berry.png
+missing: green berry.png
+missing: purple berry.png
+missing: raw bacon.png
+missing: hammer.png
+missing: sledge hammer.png
+missing: canned cola.png
+missing: nato magazine.png
+missing: nato drum.png
+missing: lebel magazine.png
+missing: tracer bullets.png
+missing: nato tracer magazine.png
+missing: savage drum.png
+missing: lapua magazine.png
+missing: lapua tracer magazine.png
+missing: yuri magazine.png
+missing: xtrmin magazine.png
+missing: pdw magazine.png
+missing: shell.png
+missing: stone plate.png
+missing: stone support.png
+missing: stone frame.png
+missing: stone cross.png
+missing: wood foundation.png
+missing: wood wall.png
+missing: wood doorway.png
+missing: wood ramp.png
+missing: greenhouse foundation.png
+missing: greenhouse platform.png
+missing: wood hole.png
+missing: wood window.png
+missing: wood post.png
+missing: wood rampart.png
+missing: stone rampart.png
+missing: stone post.png
+missing: stone wall.png
+missing: stone doorway.png
+missing: stone window.png
+missing: stone pillar.png
+missing: dock foundation.png
+missing: brazier.png
+missing: garage port.png
+missing: stone garage port.png
+missing: wood door.png
+missing: snare.png
+missing: electric trap.png
+missing: wood shutter.png
+missing: moab.png
+missing: tripmine.png
+missing: landmine.png
+missing: metal shield.png
+missing: electric fence.png
+missing: wire fence.png
+missing: wood garage door.png
+missing: metal door.png
+missing: metal shutter.png
+missing: metal garage door.png
+missing: cot.png
+missing: splint.png
+missing: crushed red berry.png
+missing: crushed blue berry.png
+missing: crushed pink berry.png
+missing: crushed pale berry.png
+missing: crushed green berry.png
+missing: crushed purple berry.png
+missing: bottled water.png
+missing: cooked venison.png
+missing: cooked bacon.png
+missing: full nato magazine.png
+missing: full nato drum.png
+missing: full lebel magazine.png
+missing: full nato tracer magazine.png
+missing: full savage magazine.png
+missing: full savage drum.png
+missing: full lapua magazine.png
+missing: full lapua tracer magazine.png
+missing: full yuri magazine.png
+missing: full xtrmin magazine.png
+missing: full pdw magazine.png
+missing: slug.png
+missing: tactical light.png
+missing: muffler.png
+missing: zoomomatic.png
+missing: handlamp.png
+missing: longbow.png
+missing: frag grenade.png

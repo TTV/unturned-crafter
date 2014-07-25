@@ -7,13 +7,13 @@
 
 var unturned = {
 
-	version: "1.1.1",
-	ut_version: "2.1.7",
+	version: "1.1.2",
+	ut_version: "2.1.8",
 
 	items: [],
 
 	tools: [
-		{name: "handsaw", imgXoffset: 0},
+		{name: "handsaw", imgXoffset: 0x0},
 		{name: "fire", imgXoffset: 0x20},
 		{name: "pocket knife", imgXoffset: 0x40}
 	],
@@ -21,57 +21,57 @@ var unturned = {
 	atomic: [
 		{name: "log", imgXoffset: 0x60},
 		{name: "branch", imgXoffset: 0x80},
-		{name: "rock", imgXoffset: 0xA0},
-		{name: "animal pants", imgXoffset: 0xC0},
-		{name: "cloth", imgXoffset: 0xE0},
-		{name: "can", imgXoffset: 0x100},
-		{name: "construction helmet", imgXoffset: 0x120},
-		{name: "torch", imgXoffset: 0x140},
-		{name: "raw explosive", imgXoffset: 0x160},
-		{name: "fresh carrot", imgXoffset: 0x180},
-		{name: "moldy carrot", imgXoffset: 0x1A0},
-		{name: "fresh tomato", imgXoffset: 0x1C0},
-		{name: "moldy tomato", imgXoffset: 0x1E0},
-		{name: "fresh corn", imgXoffset: 0x200},
-		{name: "moldy corn", imgXoffset: 0x220},
-		{name: "fresh cabbage", imgXoffset: 0x240},
-		{name: "moldy cabbage", imgXoffset: 0x260},
-		{name: "fresh potato", imgXoffset: 0x280},
-		{name: "moldy potato", imgXoffset: 0x2A0},
-		{name: "red berry", imgXoffset: 0x2C0},
-		{name: "blue berry", imgXoffset: 0x2E0},
-		{name: "pink berry", imgXoffset: 0x300},
-		{name: "pale berry", imgXoffset: 0x320},
-		{name: "green berry", imgXoffset: 0x340},
-		{name: "purple berry", imgXoffset: 0x360},
-		{name: "purification tablet", imgXoffset: 0x380},
-		{name: "moldy bottled water", imgXoffset: 0x3A0},
-		{name: "moldy milk", imgXoffset: 0x3C0},
-		{name: "moldy orange juice", imgXoffset: 0x3E0},
-		{name: "raw venison", imgXoffset: 0x400},
-		{name: "raw bacon", imgXoffset: 0x420},
-		{name: "battery", imgXoffset: 0x440},
+		{name: "rock", imgXoffset: 0xa0},
+		{name: "animal pants", imgXoffset: 0xc0},
+		{name: "cloth", imgXoffset: 0xe0},
+		{name: "construction helmet", imgXoffset: 0x100},
+		{name: "torch", imgXoffset: 0x120},
+		{name: "raw explosive", imgXoffset: 0x140},
+		{name: "fresh carrot", imgXoffset: 0x160},
+		{name: "moldy carrot", imgXoffset: 0x180},
+		{name: "fresh tomato", imgXoffset: 0x1a0},
+		{name: "moldy tomato", imgXoffset: 0x1c0},
+		{name: "fresh corn", imgXoffset: 0x1e0},
+		{name: "moldy corn", imgXoffset: 0x200},
+		{name: "fresh cabbage", imgXoffset: 0x220},
+		{name: "moldy cabbage", imgXoffset: 0x240},
+		{name: "fresh potato", imgXoffset: 0x260},
+		{name: "moldy potato", imgXoffset: 0x280},
+		{name: "red berry", imgXoffset: 0x2a0},
+		{name: "blue berry", imgXoffset: 0x2c0},
+		{name: "pink berry", imgXoffset: 0x2e0},
+		{name: "pale berry", imgXoffset: 0x300},
+		{name: "green berry", imgXoffset: 0x320},
+		{name: "purple berry", imgXoffset: 0x340},
+		{name: "purification tablet", imgXoffset: 0x360},
+		{name: "moldy bottled water", imgXoffset: 0x380},
+		{name: "moldy milk", imgXoffset: 0x3a0},
+		{name: "moldy orange juice", imgXoffset: 0x3c0},
+		{name: "raw venison", imgXoffset: 0x3e0},
+		{name: "raw bacon", imgXoffset: 0x400},
+		{name: "battery", imgXoffset: 0x420},
+		{name: "hammer", imgXoffset: 0x440},
 		{name: "sledge hammer", imgXoffset: 0x460},
 		{name: "canned cola", imgXoffset: 0x480},
-		{name: "binocular", imgXoffset: 0x4A0},
-		{name: "military bullets", imgXoffset: 0x4C0},
-		{name: "nato magazine", imgXoffset: 0x4E0},
+		{name: "binocular", imgXoffset: 0x4a0},
+		{name: "military bullets", imgXoffset: 0x4c0},
+		{name: "nato magazine", imgXoffset: 0x4e0},
 		{name: "nato drum", imgXoffset: 0x500},
 		{name: "civilian bullets", imgXoffset: 0x520},
 		{name: "swift magazine", imgXoffset: 0x540},
 		{name: "bonjour clip", imgXoffset: 0x560},
 		{name: "lebel magazine", imgXoffset: 0x580},
-		{name: "tracer bullets", imgXoffset: 0x5A0},
-		{name: "nato tracer magazine", imgXoffset: 0x5C0},
-		{name: "savage magazine", imgXoffset: 0x5E0},
+		{name: "tracer bullets", imgXoffset: 0x5a0},
+		{name: "nato tracer magazine", imgXoffset: 0x5c0},
+		{name: "savage magazine", imgXoffset: 0x5e0},
 		{name: "savage drum", imgXoffset: 0x600},
 		{name: "winchester clip", imgXoffset: 0x620},
 		{name: "lapua magazine", imgXoffset: 0x640},
 		{name: "lapua tracer magazine", imgXoffset: 0x660},
 		{name: "yuri magazine", imgXoffset: 0x680},
-		{name: "xtrmin magazine", imgXoffset: 0x6A0},
-		{name: "pdw magazine", imgXoffset: 0x6C0},
-		{name: "shell", imgXoffset: 0x6E0},
+		{name: "xtrmin magazine", imgXoffset: 0x6a0},
+		{name: "pdw magazine", imgXoffset: 0x6c0},
+		{name: "shell", imgXoffset: 0x6e0},
 		{name: "vitamins", imgXoffset: 0x700}
 	],
 
@@ -237,7 +237,7 @@ var unturned = {
 			if (tool)
 				ctx.fillStyle = "rgb(172, 150, 124)";
 			else
-				ctx.fillStyle = "rgb(106, 96, 84)";
+				ctx.fillStyle = "#eee";
 			ctx.fillRect(pos.x, pos.y, sz.w, sz.h);
 			ctx.strokeStyle = "rgb(105, 96, 81)";
 			ctx.strokeRect(pos.x, pos.y, sz.w, sz.h);
@@ -248,7 +248,7 @@ var unturned = {
 				ctx.lineTo(pos.x + mulWidth, pos.y + sz.h);
 				ctx.stroke();
 			}
-			ctx.fillStyle = "#FFFFFF";
+			ctx.fillStyle = "#444";
 			if (!tool){
 				ctx.fillText(mulTxt, pos.x + 1 + box_padding, pos.y + ((sz.h - font_height) / 2) - 1);  // multiplier
 			}
@@ -373,146 +373,147 @@ var unturned = {
 		this.addItem("stick", 4, ["1*board", "handsaw"], 0x740); // 4 sticks = 1 board + handsaw
 		this.addItem("nail", 2, ["1*scrap metal"], 0x760); // 2 nails = 1 scrap metal
 		this.addItem("bolt", 2, ["1*scrap metal", "fire"], 0x780); // 2 bolts = 1 scrap metal + fire
-		this.addItem("wood spike", 1, ["1*stick", "pocket knife"], 0x7A0); // 1 wooden spike = 2 sticks + pocket knife#
-		this.addItem("stick", 3, ["1*branch"], 0x7C0); // 3 sticks = 1 branch
-		this.addItem("stone", 3, ["1*rock"], 0x7E0); // 3 stone = 1 rock
-		this.addItem("scrap metal", 1, ["2*stone", "fire"], 0x800); // 1 scrap metal = 2 stone + fire
-		this.addItem("animal pelt", 1, ["1*animal pants"], 0x820); // 1 animal pelt = 1 animal pants
-		this.addItem("wire", 3, ["1*scrap metal", "handsaw"], 0x840); // 3 wire = 1 scrap metal + handsaw
-		this.addItem("rope", 2, ["1*cloth", "handsaw"], 0x860); // 2 rope = 1 cloth + handsaw
-		this.addItem("duct tape", 2, ["1*animal pelt", "1*can"], 0x880); // 2 duct tape = 1 animal pelt + 1 can
-		this.addItem("miner helmet", 1, ["1*construction helmet", "1*torch"], 0x8A0); // 1 miner helmet = 1 construction helmet + 1 torch
+		this.addItem("wood spike", 1, ["1*stick", "pocket knife"], 0x7a0); // 1 wooden spike = 2 sticks + pocket knife#
+		this.addItem("stick", 3, ["1*branch"], 0x740); // 3 sticks = 1 branch
+		this.addItem("stone", 3, ["1*rock"], 0x7c0); // 3 stone = 1 rock
+		this.addItem("scrap metal", 1, ["2*stone", "fire"], 0x7e0); // 1 scrap metal = 2 stone + fire
+		this.addItem("animal pelt", 1, ["1*animal pants"], 0x800); // 1 animal pelt = 1 animal pants
+		this.addItem("wire", 3, ["1*scrap metal", "handsaw"], 0x820); // 3 wire = 1 scrap metal + handsaw
+		this.addItem("rope", 2, ["1*cloth", "handsaw"], 0x840); // 2 rope = 1 cloth + handsaw
+		this.addItem("duct tape", 2, ["1*animal pelt", "1*can"], 0x860); // 2 duct tape = 1 animal pelt + 1 can
+		this.addItem("miner helmet", 1, ["1*construction helmet", "1*torch"], 0x880); // 1 miner helmet = 1 construction helmet + 1 torch
+		this.addItem("can", 1, ["2*scrap metal", "1*hammer"], 0x8a0);
 		// components
 		this.setAddContext("components");
-		this.addItem("wood plate", 1, ["2*board"], 0x8C0); // 1 wood plate = 2 board
-		this.addItem("wood support", 1, ["2*stick"], 0x8E0); // 1 wood plate = 2 stick
+		this.addItem("wood plate", 1, ["2*board"], 0x8c0); // 1 wood plate = 2 board
+		this.addItem("wood support", 1, ["2*stick"], 0x8e0); // 1 wood plate = 2 stick
 		this.addItem("wood frame", 1, ["2*wood plate"], 0x900); // 1 wood frame = 2 wood plate
 		this.addItem("wood cross", 1, ["2*wood support"], 0x920); // 1 wood cross = 2 wood support
 		this.addItem("stone plate", 1, ["2*stone"], 0x940);
 		this.addItem("stone support", 1, ["1*stone", "1*board"], 0x960);
 		this.addItem("stone frame", 1, ["2*stone plate"], 0x980);
-		this.addItem("stone cross", 1, ["2*stone support"], 0x9A0);
+		this.addItem("stone cross", 1, ["2*stone support"], 0x9a0);
 		// structures
 		this.setAddContext("structures");
-		this.addItem("wood foundation", 1, ["3*wood frame"], 0x9C0); // 1 wood foundation = 3 wood frame
-		this.addItem("wood wall", 1, ["2*wood frame", "1*wood pillar"], 0x9E0); // 1 wood wall = 2 wood frame + 1 wood pillar
-		this.addItem("wood doorway", 1, ["1*wood wall", "1*wood support"], 0xA00);
-		this.addItem("wood pillar", 1, ["2*wood support", "1*board"], 0xA20); // 1 wood pillar = 2 wood support + 1 board
-		this.addItem("wood platform", 1, ["3*wood plate", "1*wood cross"], 0xA40);
-		this.addItem("wood ramp", 1, ["1*wood platform", "2*wood support"], 0xA60);
-		this.addItem("greenhouse foundation", 1, ["1*wood foundation", "4*fertilizer"], 0xA80);
-		this.addItem("greenhouse platform", 1, ["1*wood platform", "4*fertilizer"], 0xAA0);
-		this.addItem("wood hole", 1, ["1*wood platform", "1*wood frame"], 0xAC0);
-		this.addItem("wood ladder", 1, ["9*stick", "1*duct tape"], 0xAE0);
-		this.addItem("wood window", 1, ["1*wood doorway", "1*wood support"], 0xB00);
-		this.addItem("wood post", 2, ["1*wood pillar"], 0xB20);
-		this.addItem("wood rampart", 2, ["1*wood wall"], 0xB40);
-		this.addItem("stone rampart", 2, ["1*stone wall"], 0xB60, 1); // 2 stone rampart = 1 stone wall. requires level 1 Craftsman or higher
-		this.addItem("stone post", 2, ["1*stone pillar"], 0xB80, 1);
-		this.addItem("stone wall", 1, ["2*stone frame", "1*stone pillar"], 0xBA0, 1);
-		this.addItem("stone doorway", 1, ["1*stone wall", "1*stone support"], 0xBC0, 1);
-		this.addItem("stone window", 1, ["1*stone doorway", "1*stone support"], 0xBE0, 1);
-		this.addItem("stone pillar", 1, ["2*stone support", "1*board"], 0xC00, 1);
-		this.addItem("dock foundation", 1, ["1*wood foundation", "2*wood ladder"], 0xC20);
-		this.addItem("brazier", 1, ["2*stick", "2*bolt"], 0xC40); // Wall Mounted Torch
-		this.addItem("garage port", 1, ["1*wood window", "1*wood support"], 0xC60);
-		this.addItem("stone garage port", 1, ["1*stone window", "1*stone support"], 0xC80);
+		this.addItem("wood foundation", 1, ["3*wood frame"], 0x9c0); // 1 wood foundation = 3 wood frame
+		this.addItem("wood wall", 1, ["2*wood frame", "1*wood pillar"], 0x9e0); // 1 wood wall = 2 wood frame + 1 wood pillar
+		this.addItem("wood doorway", 1, ["1*wood wall", "1*wood support"], 0xa00);
+		this.addItem("wood pillar", 1, ["2*wood support", "1*board"], 0xa20); // 1 wood pillar = 2 wood support + 1 board
+		this.addItem("wood platform", 1, ["3*wood plate", "1*wood cross"], 0xa40);
+		this.addItem("wood ramp", 1, ["1*wood platform", "2*wood support"], 0xa60);
+		this.addItem("greenhouse foundation", 1, ["1*wood foundation", "4*fertilizer"], 0xa80);
+		this.addItem("greenhouse platform", 1, ["1*wood platform", "4*fertilizer"], 0xaa0);
+		this.addItem("wood hole", 1, ["1*wood platform", "1*wood frame"], 0xac0);
+		this.addItem("wood ladder", 1, ["9*stick", "1*duct tape"], 0xae0);
+		this.addItem("wood window", 1, ["1*wood doorway", "1*wood support"], 0xb00);
+		this.addItem("wood post", 2, ["1*wood pillar"], 0xb20);
+		this.addItem("wood rampart", 2, ["1*wood wall"], 0xb40);
+		this.addItem("stone rampart", 2, ["1*stone wall"], 0xb60, 1); // 2 stone rampart = 1 stone wall. requires level 1 Craftsman or higher
+		this.addItem("stone post", 2, ["1*stone pillar"], 0xb80, 1);
+		this.addItem("stone wall", 1, ["2*stone frame", "1*stone pillar"], 0xba0, 1);
+		this.addItem("stone doorway", 1, ["1*stone wall", "1*stone support"], 0xbc0, 1);
+		this.addItem("stone window", 1, ["1*stone doorway", "1*stone support"], 0xbe0, 1);
+		this.addItem("stone pillar", 1, ["2*stone support", "1*board"], 0xc00, 1);
+		this.addItem("dock foundation", 1, ["1*wood foundation", "2*wood ladder"], 0xc20);
+		this.addItem("brazier", 1, ["2*stick", "2*bolt"], 0xc40); // Wall Mounted Torch
+		this.addItem("garage port", 1, ["1*wood window", "1*wood support"], 0xc60);
+		this.addItem("stone garage port", 1, ["1*stone window", "1*stone support"], 0xc80);
 		// Barricades
 		this.setAddContext("barricades");
-		this.addItem("wood shield", 1, ["3*board", "1*nail"], 0xCA0);
-		this.addItem("wood door", 1, ["1*wood frame", "1*bolt"], 0xCC0);
-		this.addItem("caltrop", 1, ["2*nail"], 0xDE0);
-		this.addItem("barbed wire", 1, ["2*wire"], 0xD00);
-		this.addItem("wood spike trap", 1, ["4*wood spike"], 0xD20);
-		this.addItem("snare", 1, ["1*can", "2*scrap metal"], 0xD40);
-		this.addItem("electric trap", 1, ["3*scrap metal", "2*wire"], 0xD60);
-		this.addItem("campfire", 1, ["4*stick", "4*stone"], 0xD80);
-		this.addItem("wood shutter", 1, ["1*wood door", "1*bolt"], 0xDA0);
-		this.addItem("moab", 1, ["3*raw explosive", "2*duct tape"], 0xDC0, 2); // (requires level 2 Craftsman or higher)
-		this.addItem("tripmine", 1, ["2*raw explosive", "4*wire"], 0xDE0, 2);
-		this.addItem("landmine", 1, ["2*raw explosive", "1*can"], 0xE00, 2);
-		this.addItem("metal shield", 1, ["4*scrap metal", "2*bolt"], 0xE20, 2);
-		this.addItem("electric fence", 1, ["1*wire fence", "4*scrap metal"], 0xE40);
-		this.addItem("wire fence", 1, ["2*wood support", "3*barbed wire"], 0xE60);
-		this.addItem("wood garage door", 1, ["2*wood shutter", "2*bolt"], 0xE80);
-		this.addItem("metal door", 1, ["1*wood door", "3*scrap metal"], 0xEA0, 2);
-		this.addItem("metal shutter", 1, ["1*wood shutter", "3*scrap metal"], 0xEC0);
-		this.addItem("metal garage door", 1, ["2*metal shutter", "2*bolt"], 0xEE0);
+		this.addItem("wood shield", 1, ["3*board", "1*nail"], 0xca0);
+		this.addItem("wood door", 1, ["1*wood frame", "1*bolt"], 0xcc0);
+		this.addItem("caltrop", 1, ["2*nail"], 0xce0);
+		this.addItem("barbed wire", 1, ["2*wire"], 0xd00);
+		this.addItem("wood spike trap", 1, ["4*wood spike"], 0xd20);
+		this.addItem("snare", 1, ["1*can", "2*scrap metal"], 0xd40);
+		this.addItem("electric trap", 1, ["3*scrap metal", "2*wire"], 0xd60);
+		this.addItem("campfire", 1, ["4*stick", "4*stone"], 0xd80);
+		this.addItem("wood shutter", 1, ["1*wood door", "1*bolt"], 0xda0);
+		this.addItem("moab", 1, ["3*raw explosive", "2*duct tape"], 0xdc0, 2); // (requires level 2 Craftsman or higher)
+		this.addItem("tripmine", 1, ["2*raw explosive", "4*wire"], 0xde0, 2);
+		this.addItem("landmine", 1, ["2*raw explosive", "1*can"], 0xe00, 2);
+		this.addItem("metal shield", 1, ["4*scrap metal", "2*bolt"], 0xe20, 2);
+		this.addItem("electric fence", 1, ["1*wire fence", "4*scrap metal"], 0xe40);
+		this.addItem("wire fence", 1, ["2*wood support", "3*barbed wire"], 0xe60);
+		this.addItem("wood garage door", 1, ["2*wood shutter", "2*bolt"], 0xe80);
+		this.addItem("metal door", 1, ["1*wood door", "3*scrap metal"], 0xea0, 2);
+		this.addItem("metal shutter", 1, ["1*wood shutter", "3*scrap metal"], 0xec0);
+		this.addItem("metal garage door", 1, ["2*metal shutter", "2*bolt"], 0xee0);
 		// Farming
 		this.setAddContext("farming");
-		this.addItem("carrot seed", 2, ["1*fresh carrot"], 0xF00);
-		this.addItem("carrot seed", 1, ["1*moldy carrot"], 0xF20);
-		this.addItem("tomato seed", 2, ["1*fresh tomato"], 0xF40);
-		this.addItem("tomato seed", 1, ["1*moldy tomato"], 0xF60);
-		this.addItem("corn seed", 2, ["1*fresh corn"], 0xF80);
-		this.addItem("corn seed", 1, ["1*moldy corn"], 0xFA0);
-		this.addItem("cabbage seed", 2, ["1*fresh cabbage"], 0xFC0);
-		this.addItem("cabbage seed", 1, ["1*moldy cabbage"], 0xFE00);
-		this.addItem("potato seed", 2, ["1*fresh potato"], 0x1000);
-		this.addItem("potato seed", 1, ["1*moldy potato"], 0x1020);
-		this.addItem("fertilizer", 3, ["1*rope", "1*cloth"], 0x1040);
+		this.addItem("carrot seed", 2, ["1*fresh carrot"], 0xf00);
+		this.addItem("carrot seed", 1, ["1*moldy carrot"], 0xf00);
+		this.addItem("tomato seed", 2, ["1*fresh tomato"], 0xf20);
+		this.addItem("tomato seed", 1, ["1*moldy tomato"], 0xf20);
+		this.addItem("corn seed", 2, ["1*fresh corn"], 0xf40);
+		this.addItem("corn seed", 1, ["1*moldy corn"], 0xf40);
+		this.addItem("cabbage seed", 2, ["1*fresh cabbage"], 0xf60);
+		this.addItem("cabbage seed", 1, ["1*moldy cabbage"], 0xf60);
+		this.addItem("potato seed", 2, ["1*fresh potato"], 0xf80);
+		this.addItem("potato seed", 1, ["1*moldy potato"], 0xf80);
+		this.addItem("fertilizer", 3, ["1*rope", "1*cloth"], 0xfa0);
 		// Storage
 		this.setAddContext("storage");
-		this.addItem("crate", 1, ["2*wood frame", "3*wood cross"], 0x1060, 1); // (requires level 1 Craftsman or higher)
-		this.addItem("chest", 1, ["1*crate", "3*wood cross"], 0x1080, 2); // (requires level 2 Craftsmam or higher)
-		this.addItem("metal locker", 1, ["1*crate", "3*scrap metal"], 0x10A0, 2); // (requires level 2 Craftsman or higher)
+		this.addItem("crate", 1, ["2*wood frame", "3*wood cross"], 0xfc0, 1); // (requires level 1 Craftsman or higher)
+		this.addItem("chest", 1, ["1*crate", "3*wood cross"], 0xfe0, 2); // (requires level 2 Craftsmam or higher)
+		this.addItem("metal locker", 1, ["1*crate", "3*scrap metal"], 0x1000, 2); // (requires level 2 Craftsman or higher)
 		// Sleeping
 		this.setAddContext("sleeping");
-		this.addItem("cot", 1, ["8*cloth", "5*scrap metal"], 0x10C0);
-		this.addItem("sleeping bag", 1, ["7*cloth", "2*duct tape"], 0x10E0);
+		this.addItem("cot", 1, ["8*cloth", "5*scrap metal"], 0x1020);
+		this.addItem("sleeping bag", 1, ["7*cloth", "2*duct tape"], 0x1040);
 		// Medical
 		this.setAddContext("medical");
-		this.addItem("rag", 1, ["2*cloth"], 0x1100);
-		this.addItem("bandage", 1, ["2*rag"], 0x1120);
-		this.addItem("dressing", 1, ["2*bandage"], 0x1140);
-		this.addItem("splint", 1, ["1*scrap metal", "2*stick"], 0x1160);
-		this.addItem("crushed red berry", 1, ["2*red berry", "1*stone"], 0x1180);
-		this.addItem("crushed blue berry", 1, ["2*blue berry", "1*stone"], 0x11A0);
-		this.addItem("crushed pink berry", 1, ["2*pink berry", "1*stone"], 0x11C0);
-		this.addItem("crushed pale berry", 1, ["2*pale berry", "1*stone"], 0x11E0);
-		this.addItem("crushed green berry", 1, ["2*green berry", "1*stone"], 0x1200);
-		this.addItem("crushed purple berry", 1, ["2*purple berry", "1*stone"], 0x1220);
-		this.addItem("purification tablet", 1, ["1*fertilizer", "1*vitamins"], 0x1240);
+		this.addItem("rag", 1, ["2*cloth"], 0x1060);
+		this.addItem("bandage", 1, ["2*rag"], 0x1080);
+		this.addItem("dressing", 1, ["2*bandage"], 0x10a0);
+		this.addItem("splint", 1, ["1*scrap metal", "2*stick"], 0x10c0);
+		this.addItem("crushed red berry", 1, ["2*red berry", "1*stone"], 0x10e0);
+		this.addItem("crushed blue berry", 1, ["2*blue berry", "1*stone"], 0x1100);
+		this.addItem("crushed pink berry", 1, ["2*pink berry", "1*stone"], 0x1120);
+		this.addItem("crushed pale berry", 1, ["2*pale berry", "1*stone"], 0x1140);
+		this.addItem("crushed green berry", 1, ["2*green berry", "1*stone"], 0x1160);
+		this.addItem("crushed purple berry", 1, ["2*purple berry", "1*stone"], 0x1180);
+		this.addItem("purification tablet", 1, ["1*fertilizer", "1*vitamins"], 0x360);
 		// Water
 		this.setAddContext("water");
-		this.addItem("bottled water", 1, ["1*moldy bottled water", "1*purification tablet"], 0x1260);
-		this.addItem("milk", 1, ["1*moldy milk", "1*purification tablet"], 0x1280);
-		this.addItem("orange juice", 1, ["1*moldy orange juice", "1*purification tablet"], 0x12A0);
+		this.addItem("bottled water", 1, ["1*moldy bottled water", "1*purification tablet"], 0x11a0);
+		this.addItem("milk", 1, ["1*moldy milk", "1*purification tablet"], 0x11c0);
+		this.addItem("orange juice", 1, ["1*moldy orange juice", "1*purification tablet"], 0x11e0);
 		// Food
 		this.setAddContext("food");
-		this.addItem("cooked venison", 1, ["1*raw venison", "fire"], 0x12C0);
-		this.addItem("cooked bacon", 1, ["1*raw bacon", "fire"], 0x12E0);
+		this.addItem("cooked venison", 1, ["1*raw venison", "fire"], 0x1200);
+		this.addItem("cooked bacon", 1, ["1*raw bacon", "fire"], 0x1220);
 		// Ammunition
 		this.setAddContext("ammunition");
-		this.addItem("full nato magazine", 1, ["2*military bullets", "1*nato magazine"], 0x1300);
-		this.addItem("full nato drum", 1, ["4*military bullets", "1*nato drum"], 0x1320);
-		this.addItem("full swift magazine", 1, ["1*civilian bullets", "1*swift magazine"], 0x1340);
-		this.addItem("full bonjour clip", 1, ["1*civilian bullets", "1*bonjour clip"], 0x1360);
-		this.addItem("full lebel magazine", 1, ["1*civilian bullets", "1*lebel magazine"], 0x1380);
-		this.addItem("full nato tracer magazine", 1, ["2*tracer bullets", "1*nato tracer magazine"], 0x13A0);
-		this.addItem("full savage magazine", 1, ["2*civilian bullets", "1*savage magazine"], 0x13C0);
-		this.addItem("full savage drum", 1, ["3*civilian bullets", "1*savage drum"], 0x13E0);
-		this.addItem("full winchester clip", 1, ["1*civilian bullets", "1*winchester clip"], 0x1400);
-		this.addItem("full lapua magazine", 1, ["1*military bullets", "1*lapua magazine"], 0x1420);
-		this.addItem("full lapua tracer magazine", 1, ["1*tracer bullets", "1*lapua tracer magazine"], 0x1440);
-		this.addItem("full yuri magazine", 1, ["2*civilian bullets", "1*yuri magazine"], 0x1460);
-		this.addItem("full xtrmin magazine", 1, ["1*civilian bullets", "1*xtrmin magazine"], 0x1480);
-		this.addItem("full pdw magazine", 1, ["2*military bullets", "1*pdw magazine"], 0x14A0);
-		this.addItem("arrow", 3, ["1*stick", "1*nail"], 0x14C0);
-		this.addItem("buckshot", 6, ["1*shell", "2*nail"], 0x14E0);
-		this.addItem("slug", 6, ["1*shell", "2*bolt"], 0x1500);
+		this.addItem("full nato magazine", 1, ["2*military bullets", "1*nato magazine"], 0x1240);
+		this.addItem("full nato drum", 1, ["4*military bullets", "1*nato drum"], 0x1260);
+		this.addItem("full swift magazine", 1, ["1*civilian bullets", "1*swift magazine"], 0x1280);
+		this.addItem("full bonjour clip", 1, ["1*civilian bullets", "1*bonjour clip"], 0x12a0);
+		this.addItem("full lebel magazine", 1, ["1*civilian bullets", "1*lebel magazine"], 0x12c0);
+		this.addItem("full nato tracer magazine", 1, ["2*tracer bullets", "1*nato tracer magazine"], 0x12e0);
+		this.addItem("full savage magazine", 1, ["2*civilian bullets", "1*savage magazine"], 0x1300);
+		this.addItem("full savage drum", 1, ["3*civilian bullets", "1*savage drum"], 0x1320);
+		this.addItem("full winchester clip", 1, ["1*civilian bullets", "1*winchester clip"], 0x1340);
+		this.addItem("full lapua magazine", 1, ["1*military bullets", "1*lapua magazine"], 0x1360);
+		this.addItem("full lapua tracer magazine", 1, ["1*tracer bullets", "1*lapua tracer magazine"], 0x1380);
+		this.addItem("full yuri magazine", 1, ["2*civilian bullets", "1*yuri magazine"], 0x13a0);
+		this.addItem("full xtrmin magazine", 1, ["1*civilian bullets", "1*xtrmin magazine"], 0x13c0);
+		this.addItem("full pdw magazine", 1, ["2*military bullets", "1*pdw magazine"], 0x13e0);
+		this.addItem("arrow", 3, ["1*stick", "1*nail"], 0x1400);
+		this.addItem("buckshot", 6, ["1*shell", "2*nail"], 0x1420);
+		this.addItem("slug", 6, ["1*shell", "2*bolt"], 0x1440);
 		// Attatchments
 		this.setAddContext("attachments");
-		this.addItem("tactical light", 1, ["1*handlamp", "2*duct tape"], 0x1520);
-		this.addItem("muffler", 1, ["2*canned cola", "2*can", "fire"], 0x1540);
-		this.addItem("zoomomatic", 1, ["1*binocular", "2*duct tape"], 0x1560);
+		this.addItem("tactical light", 1, ["1*handlamp", "2*duct tape"], 0x1460);
+		this.addItem("muffler", 1, ["2*canned cola", "2*can", "fire"], 0x1480);
+		this.addItem("zoomomatic", 1, ["1*binocular", "2*duct tape"], 0x14a0);
 		// Gear
 		this.setAddContext("gear");
-		this.addItem("handlamp", 1, ["1*battery", "2*scrap metal"], 0x1580);
-		this.addItem("longbow", 1, ["3*wood support", "2*rope"], 0x15A0);
-		this.addItem("canteen", 1, ["1*can", "1*bottled water"], 0x15C0);
-		this.addItem("frag grenade", 1, ["3*nail", "1*raw explosive"], 0x15E0, 1);  // (requires level 1 craftsman or higher)
-		this.addItem("car jack", 1, ["1*sledge hammer", "4*scrap metal"], 0x1600);
+		this.addItem("handlamp", 1, ["1*battery", "2*scrap metal"], 0x14c0);
+		this.addItem("longbow", 1, ["3*wood support", "2*rope"], 0x14e0);
+		this.addItem("canteen", 1, ["1*can", "1*bottled water"], 0x1500);
+		this.addItem("frag grenade", 1, ["3*nail", "1*raw explosive"], 0x1520, 1);  // (requires level 1 craftsman or higher)
+		this.addItem("car jack", 1, ["1*sledge hammer", "4*scrap metal"], 0x1540);
 	}
 
 };
