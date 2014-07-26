@@ -2,9 +2,7 @@ missing: animal pants.png
 missing: pink berry.png
 missing: green berry.png
 missing: raw bacon.png
-missing: nato magazine.png
 missing: nato drum.png
-missing: lebel magazine.png
 missing: tracer bullets.png
 missing: nato tracer magazine.png
 missing: savage drum.png
@@ -22,14 +20,12 @@ missing: electric trap.png
 missing: moab.png
 missing: tripmine.png
 missing: landmine.png
-missing: metal shield.png
 missing: electric fence.png
 missing: wire fence.png
 missing: wood garage door.png
 missing: metal door.png
 missing: metal shutter.png
 missing: metal garage door.png
-missing: splint.png
 missing: crushed red berry.png
 missing: crushed blue berry.png
 missing: crushed pink berry.png
@@ -37,9 +33,7 @@ missing: crushed pale berry.png
 missing: crushed green berry.png
 missing: crushed purple berry.png
 missing: cooked bacon.png
-missing: full nato magazine.png
 missing: full nato drum.png
-missing: full lebel magazine.png
 missing: full nato tracer magazine.png
 missing: full savage drum.png
 missing: full lapua magazine.png
