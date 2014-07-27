@@ -1,7 +1,5 @@
-missing: animal pants.png
 missing: pink berry.png
 missing: green berry.png
-missing: raw bacon.png
 missing: nato drum.png
 missing: tracer bullets.png
 missing: savage drum.png
@@ -31,7 +29,6 @@ missing: crushed pink berry.png
 missing: crushed pale berry.png
 missing: crushed green berry.png
 missing: crushed purple berry.png
-missing: cooked bacon.png
 missing: full nato drum.png
 missing: full savage drum.png
 missing: full lapua magazine.png
