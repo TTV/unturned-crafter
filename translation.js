@@ -53,10 +53,6 @@ var translation = {
 			en: "Rock"
 		},
 		{
-			name: "animal pants",
-			en: "Animal pants"
-		},
-		{
 			name: "cloth",
 			en: "Cloth"
 		},
@@ -643,6 +639,22 @@ var translation = {
 		{
 			name: "cooked bacon",
 			en: "Cooked bacon"
+		},
+		{
+			name: "clothing",
+			en: "Clothing"
+		},
+		{
+			name: "animal pants",
+			en: "Animal pants"
+		},
+		{
+			name: "animal shirt",
+			en: "Animal shirt"
+		},
+		{
+			name: "animal pack",
+			en: "Animal pack"
 		},
 		{
 			name: "ammunition",
