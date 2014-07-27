@@ -2,6 +2,7 @@
 <head>
 <link rel="icon" type="image/png" href="images/favicon.png">
 <title>Unturned Craftin Helper by TTV</title>
+<meta name="keywords" content="Game,Free to Play,Zombies,Survival,Multiplayer,Crafting,Guide">
 <link rel="stylesheet" href="jstree-theme/style.min.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="jstree.min.js" type="text/javascript"></script>
@@ -56,6 +57,13 @@
 		$("#show_imgs").change(function(){
 			$('#explorer').trigger("changed.jstree");
 		});
+
+		$("#logo_click").click(function(){
+			$("#about").show();
+		});
+		$("#about_close").click(function(){
+			$("#about").hide();
+		})
 	});
 </script>
 <script>
@@ -163,13 +171,34 @@ a:hover{
 	color: #eee;
 	flex-shrink: 0;
 }
+#about{
+	position: absolute;
+	left: 100px;
+	right: 100px;
+	top: 100px;
+	bottom: 100px;
+	z-index: 1000;
+	background-color: #444;
+	border: 1px solid #000;
+	font-size: 16px;
+	color: #ccc;
+}
+.about-head{
+	font-size: 150%;
+	display: block;
+	padding-top: 16px;
+	color: #77A6A8;
+}
+.about-head:first-child{
+	padding-top: 0;
+}
 </style>
 </head>
 <body>
 <div style="display: none"><img id="resource_images" src="images/resources.png"></div>
 <div class="vlayout">
 	<div class="unturn_header">
-		<a href="http://store.steampowered.com/app/304930/" target="_blank"><img src="images/logo.jpg"></a>
+		<a id="logo_click" href="#"><img src="images/logo.jpg"></a>
 		<div class="unturn_header_txt">
 			Crafting Helper V<span id="utcrafter_ver">0.0</span> by <a href="https://twitter.com/TTV69" target="_blank">@TTV69</a> with help from <a href="https://twitter.com/oMoike_">@oMoike_</a><br />
 			For Unturned V<span id="unturned_ver">0.0</span> (a most excellent game)<br />
@@ -202,6 +231,38 @@ a:hover{
 		</div>
 	</div>
 	<div class="footer"><sup>*</sup>Images are an on-going project, please be patient ;-) Peace</div>
+</div>
+<div id="about" style="display: none">
+	<div style="display: flex; flex-direction: column; position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
+		<div style="flex-grow: 1; overflow: auto; padding: 8px">
+			<span class="about-head">Unturned</span>
+			You become a survivor in the zombie infested ruins of society, and team up with your friends to remain among the living.
+
+			<span class="about-head">About the Game</span>
+			Unturned is a sandbox game in the emerging multiplayer apocalypse survival genre. Rather than focusing on being an MMO it provides players with easy systems to sit down and survive the zombie infestation with their friends. Over the course of a typical adventure, groups will have a blast fortifying locations, scavenging for supplies, trying to live off the land and negotiating with other people. The game is being developed entirely with the community in focus, and tons of features are based entirely on feedback: 
+
+			<span class="about-head">Fortification: </span>
+			Players can build massive forts out of structural building blocks, or build onto smaller buildings in the world with barricades. It is also possible to create traps and intricate electronic systems. More options for building are constantly being added based on what the community requests. 
+
+			<span class="about-head">Survival: </span>
+			It is entirely possible to live off the wilderness by harvesting trees and rocks, growing crops and hunting animals down. What sort of survival stuff is added is entirely decided by the community. 
+
+			<span class="about-head">Explore: </span>
+			The game goes where the community wants it to. The initial release map is set on the lovely Prince Edward Island, but over the next few months many more locations will arrive for players to explore depending on what the community wants to see. Currently the island has plenty of interesting locations to discover and loot. 
+
+			<span class="about-head">Bandits: </span>
+			Players can choose to enter player versus player servers and battle other players to steal their gear. Banditry is highly supported with plenty of weapons and sneaky devices. 
+
+			<span class="about-head">Heroes: </span>
+			Players can join player versus environment servers to team up with other people, and easily create clans to play with their pals.
+
+			<span class="about-head">Download: </span>
+			Unturned is currently free early acces on <a href="http://store.steampowered.com/app/304930/" target="_blank">steam</a>. Try it out citizens :)
+		</div>
+		<div style="flex-shrink: 0; border-top: 1px solid #eee; text-align: right;">
+		  <a id="about_close" href="#">Close</a>
+		</div>
+	</div>
 </div>
 </body>
 </html>
