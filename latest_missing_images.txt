@@ -1,5 +1,3 @@
-missing: pink berry.png
-missing: green berry.png
 missing: nato drum.png
 missing: tracer bullets.png
 missing: savage drum.png
@@ -23,12 +21,7 @@ missing: wood garage door.png
 missing: metal door.png
 missing: metal shutter.png
 missing: metal garage door.png
-missing: crushed red berry.png
 missing: crushed blue berry.png
-missing: crushed pink berry.png
-missing: crushed pale berry.png
-missing: crushed green berry.png
-missing: crushed purple berry.png
 missing: full nato drum.png
 missing: full savage drum.png
 missing: full lapua magazine.png
