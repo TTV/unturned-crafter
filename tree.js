@@ -581,7 +581,6 @@ var unturned = {
 					$("#output_foot").html(s).height(200);
 					break;
 			}
-
 		}
 	}
 
