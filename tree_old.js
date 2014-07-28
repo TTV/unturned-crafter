@@ -18,7 +18,8 @@ var unturned = {
 	tools: [
 		{name: "handsaw", imgXoffset: 0x0},
 		{name: "fire", imgXoffset: 0x20},
-		{name: "pocket knife", imgXoffset: 0x40}
+		{name: "pocket knife", imgXoffset: 0x40},
+		{name: "hammer", imgXoffset: 0x460}
 	],
 
 	atomic: [
@@ -54,7 +55,6 @@ var unturned = {
 		{name: "raw venison", imgXoffset: 0x400},
 		{name: "raw bacon", imgXoffset: 0x420},
 		{name: "battery", imgXoffset: 0x440},
-		{name: "hammer", imgXoffset: 0x460},
 		{name: "sledge hammer", imgXoffset: 0x480},
 		{name: "canned cola", imgXoffset: 0x4a0},
 		{name: "binocular", imgXoffset: 0x4c0},
@@ -499,12 +499,12 @@ var unturned = {
 		this.addItem("tripmine", 1, ["2*raw explosive", "4*wire"], 0xde0, 2);
 		this.addItem("landmine", 1, ["2*raw explosive", "1*can"], 0xe00, 2);
 		this.addItem("metal shield", 1, ["4*scrap metal", "2*bolt"], 0xe20, 2);
-		this.addItem("electric fence", 1, ["1*wire fence", "4*scrap metal"], 0xe40);
-		this.addItem("wire fence", 1, ["2*wood support", "3*barbed wire"], 0xe60);
-		this.addItem("wood garage door", 1, ["2*wood shutter", "2*bolt"], 0xe80);
+		this.addItem("electric fence", 1, ["1*barbed fence", "4*scrap metal"], 0xe40);
+		this.addItem("barbed fence", 1, ["2*wood support", "3*barbed wire"], 0xe60);
+		this.addItem("wood gate", 1, ["2*wood shutter", "2*bolt"], 0xe80);
 		this.addItem("metal door", 1, ["1*wood door", "3*scrap metal"], 0xea0, 2);
 		this.addItem("metal shutter", 1, ["1*wood shutter", "3*scrap metal"], 0xec0);
-		this.addItem("metal garage door", 1, ["2*metal shutter", "2*bolt"], 0xee0);
+		this.addItem("metal gate", 1, ["2*metal shutter", "2*bolt"], 0xee0);
 		// Farming
 		this.setAddContext("farming");
 		this.addItem("carrot seed", 2, ["1*fresh carrot"], 0xf00);

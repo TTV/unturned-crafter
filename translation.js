@@ -497,12 +497,12 @@ var translation = {
 			en: "Electric fence"
 		},
 		{
-			name: "wire fence",
-			en: "Wire fence"
+			name: "barbed fence",
+			en: "Barbed fence"
 		},
 		{
-			name: "wood garage door",
-			en: "Wood garage door"
+			name: "wood gate",
+			en: "Wood gate"
 		},
 		{
 			name: "metal door",
@@ -513,8 +513,8 @@ var translation = {
 			en: "Metal shutter"
 		},
 		{
-			name: "metal garage door",
-			en: "Metal garage door"
+			name: "metal gate",
+			en: "Metal gate"
 		},
 		{
 			name: "farming",

@@ -18,43 +18,43 @@ var unturned = {
 	tools: [
 		{name: "handsaw", imgXoffset: 0x0},
 		{name: "fire", imgXoffset: 0x20},
-		{name: "pocket knife", imgXoffset: 0x40}
+		{name: "pocket knife", imgXoffset: 0x40},
+		{name: "hammer", imgXoffset: 0x60}
 	],
 
 	atomic: [
-		{name: "log", imgXoffset: 0x60},
-		{name: "branch", imgXoffset: 0x80},
-		{name: "rock", imgXoffset: 0xa0},
-		{name: "animal pants", imgXoffset: 0xc0},
-		{name: "cloth", imgXoffset: 0xe0},
-		{name: "animal pelt", imgXoffset: 0x100},
-		{name: "construction helmet", imgXoffset: 0x120},
-		{name: "torch", imgXoffset: 0x140},
-		{name: "raw explosive", imgXoffset: 0x160},
-		{name: "fresh carrot", imgXoffset: 0x180},
-		{name: "moldy carrot", imgXoffset: 0x1a0},
-		{name: "fresh tomato", imgXoffset: 0x1c0},
-		{name: "moldy tomato", imgXoffset: 0x1e0},
-		{name: "fresh corn", imgXoffset: 0x200},
-		{name: "moldy corn", imgXoffset: 0x220},
-		{name: "fresh cabbage", imgXoffset: 0x240},
-		{name: "moldy cabbage", imgXoffset: 0x260},
-		{name: "fresh potato", imgXoffset: 0x280},
-		{name: "moldy potato", imgXoffset: 0x2a0},
-		{name: "red berry", imgXoffset: 0x2c0},
-		{name: "blue berry", imgXoffset: 0x2e0},
-		{name: "pink berry", imgXoffset: 0x300},
-		{name: "pale berry", imgXoffset: 0x320},
-		{name: "green berry", imgXoffset: 0x340},
-		{name: "purple berry", imgXoffset: 0x360},
-		{name: "purification tablet", imgXoffset: 0x380},
-		{name: "moldy bottled water", imgXoffset: 0x3a0},
-		{name: "moldy milk", imgXoffset: 0x3c0},
-		{name: "moldy orange juice", imgXoffset: 0x3e0},
-		{name: "raw venison", imgXoffset: 0x400},
-		{name: "raw bacon", imgXoffset: 0x420},
-		{name: "battery", imgXoffset: 0x440},
-		{name: "hammer", imgXoffset: 0x460},
+		{name: "log", imgXoffset: 0x80},
+		{name: "branch", imgXoffset: 0xa0},
+		{name: "rock", imgXoffset: 0xc0},
+		{name: "animal pants", imgXoffset: 0xe0},
+		{name: "cloth", imgXoffset: 0x100},
+		{name: "animal pelt", imgXoffset: 0x120},
+		{name: "construction helmet", imgXoffset: 0x140},
+		{name: "torch", imgXoffset: 0x160},
+		{name: "raw explosive", imgXoffset: 0x180},
+		{name: "fresh carrot", imgXoffset: 0x1a0},
+		{name: "moldy carrot", imgXoffset: 0x1c0},
+		{name: "fresh tomato", imgXoffset: 0x1e0},
+		{name: "moldy tomato", imgXoffset: 0x200},
+		{name: "fresh corn", imgXoffset: 0x220},
+		{name: "moldy corn", imgXoffset: 0x240},
+		{name: "fresh cabbage", imgXoffset: 0x260},
+		{name: "moldy cabbage", imgXoffset: 0x280},
+		{name: "fresh potato", imgXoffset: 0x2a0},
+		{name: "moldy potato", imgXoffset: 0x2c0},
+		{name: "red berry", imgXoffset: 0x2e0},
+		{name: "blue berry", imgXoffset: 0x300},
+		{name: "pink berry", imgXoffset: 0x320},
+		{name: "pale berry", imgXoffset: 0x340},
+		{name: "green berry", imgXoffset: 0x360},
+		{name: "purple berry", imgXoffset: 0x380},
+		{name: "purification tablet", imgXoffset: 0x3a0},
+		{name: "moldy bottled water", imgXoffset: 0x3c0},
+		{name: "moldy milk", imgXoffset: 0x3e0},
+		{name: "moldy orange juice", imgXoffset: 0x400},
+		{name: "raw venison", imgXoffset: 0x420},
+		{name: "raw bacon", imgXoffset: 0x440},
+		{name: "battery", imgXoffset: 0x460},
 		{name: "sledge hammer", imgXoffset: 0x480},
 		{name: "canned cola", imgXoffset: 0x4a0},
 		{name: "binocular", imgXoffset: 0x4c0},
@@ -499,12 +499,12 @@ var unturned = {
 		this.addItem("tripmine", 1, ["2*raw explosive", "4*wire"], 0xde0, 2);
 		this.addItem("landmine", 1, ["2*raw explosive", "1*can"], 0xe00, 2);
 		this.addItem("metal shield", 1, ["4*scrap metal", "2*bolt"], 0xe20, 2);
-		this.addItem("electric fence", 1, ["1*wire fence", "4*scrap metal"], 0xe40);
-		this.addItem("wire fence", 1, ["2*wood support", "3*barbed wire"], 0xe60);
-		this.addItem("wood garage door", 1, ["2*wood shutter", "2*bolt"], 0xe80);
+		this.addItem("electric fence", 1, ["1*barbed fence", "4*scrap metal"], 0xe40);
+		this.addItem("barbed fence", 1, ["2*wood support", "3*barbed wire"], 0xe60);
+		this.addItem("wood gate", 1, ["2*wood shutter", "2*bolt"], 0xe80);
 		this.addItem("metal door", 1, ["1*wood door", "3*scrap metal"], 0xea0, 2);
 		this.addItem("metal shutter", 1, ["1*wood shutter", "3*scrap metal"], 0xec0);
-		this.addItem("metal garage door", 1, ["2*metal shutter", "2*bolt"], 0xee0);
+		this.addItem("metal gate", 1, ["2*metal shutter", "2*bolt"], 0xee0);
 		// Farming
 		this.setAddContext("farming");
 		this.addItem("carrot seed", 2, ["1*fresh carrot"], 0xf00);
@@ -539,7 +539,7 @@ var unturned = {
 		this.addItem("crushed pale berry", 1, ["2*pale berry", "1*stone"], 0x1140);
 		this.addItem("crushed green berry", 1, ["2*green berry", "1*stone"], 0x1160);
 		this.addItem("crushed purple berry", 1, ["2*purple berry", "1*stone"], 0x1180);
-		this.addItem("purification tablet", 1, ["1*fertilizer", "1*vitamins"], 0x380);
+		this.addItem("purification tablet", 1, ["1*fertilizer", "1*vitamins"], 0x3a0);
 		// Water
 		this.setAddContext("water");
 		this.addItem("bottled water", 1, ["1*moldy bottled water", "1*purification tablet"], 0x11a0);
@@ -552,7 +552,7 @@ var unturned = {
 		// Clothing
 		this.setAddContext("clothing");
 		this.addItem("animal shirt", 1, ["4*animal pelt"], 0x1240);
-		this.addItem("animal pants", 1, ["3*animal pelt", "1*rope"], 0xc0);
+		this.addItem("animal pants", 1, ["3*animal pelt", "1*rope"], 0xe0);
 		this.addItem("animal pack", 1, ["4*animal pelt", "1*duct tape"], 0x1260);
 		// Ammunition
 		this.setAddContext("ammunition");

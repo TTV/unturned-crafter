@@ -3,27 +3,11 @@ missing: tracer bullets.png
 missing: savage drum.png
 missing: lapua magazine.png
 missing: lapua tracer magazine.png
-missing: greenhouse foundation.png
-missing: greenhouse platform.png
-missing: stone rampart.png
-missing: stone wall.png
-missing: stone doorway.png
-missing: stone window.png
-missing: stone garage.png
-missing: electric trap.png
-missing: moab.png
-missing: tripmine.png
-missing: landmine.png
-missing: electric fence.png
-missing: wire fence.png
-missing: wood garage door.png
-missing: metal door.png
-missing: metal shutter.png
-missing: metal garage door.png
 missing: full nato drum.png
 missing: full savage drum.png
 missing: full lapua magazine.png
 missing: full lapua tracer magazine.png
+
 missing: tactical light.png
 missing: muffler.png
 missing: zoomomatic.png
