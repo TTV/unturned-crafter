@@ -7,7 +7,7 @@
 
 var unturned = {
 
-	version: "1.2.2",
+	version: "1.2.3",
 	ut_version: "2.2.0",
 
 	language: "en",
@@ -80,6 +80,32 @@ var unturned = {
 	],
 
 	contexts: [],
+
+	user_settings: {
+		lastVersion: "",	// the last displayed release notes
+		hideSplash: false	// don't show splash
+	},
+	// ------------ utility cookie code
+	// load options from cookie
+	loadSettingsFromCookie: function(){
+		var name = "utcrafter=";
+		var ca = document.cookie.split(";");
+		for(var i = 0; i < ca.length; i++) {
+			var c = ca[i].trim();
+			if (c.indexOf(name) == 0){
+				this.user_settings = $.extend(true, this.user_settings, $.parseJSON(c.substring(name.length,c.length)));
+				break;
+			}
+		}
+	},
+
+	// save options to cookie
+	storeSettingsInCookie: function(){
+		var d = new Date();
+		d.setTime(d.getTime() + ((365)*24*60*60*1000)); // 365 days from now
+		document.cookie = "utcrafter=" + JSON.stringify(this.user_settings) + "; expires=" + d.toGMTString();
+	},
+	// ------------ utility cookie code
 
 	addContextInfo: null,
 
@@ -244,7 +270,7 @@ var unturned = {
 			var tool = $.isPlainObject(itemName) ? false : unturned.findTool(itemName);
 			var nodeTxt = typeof itemName == "string" ? itemName : itemName.name;
 			var tsz = ctx.measureText(nodeTxt);
-			var content_w = (settings.show_resources && resource_sz > tsz.width) ? resource_sz : tsz.width ;
+			var content_w = (settings.show_resources && resource_sz > Math.floor(tsz.width)) ? resource_sz : Math.floor(tsz.width) ;
 			if (content_w % 2 != 0)
 				content_w++;
 			var sz = {
@@ -256,7 +282,7 @@ var unturned = {
 			if (!tool){
 				mulTxt += multiplier;
 				var msz = ctx.measureText(mulTxt);
-				mulWidth = msz.width + (box_padding * 2) + 1;
+				mulWidth = Math.floor(msz.width) + (box_padding * 2) + 1;
 				sz.w += mulWidth;
 			}
 			var y_join_gap = sz.h / 2;
@@ -524,6 +550,7 @@ var unturned = {
 		this.addItem("cooked venison", 1, ["1*raw venison", "fire"], 0x1200);
 		this.addItem("cooked bacon", 1, ["1*raw bacon", "fire"], 0x1220);
 		// Clothing
+		this.setAddContext("clothing");
 		this.addItem("animal shirt", 1, ["4*animal pelt"], 0x1240);
 		this.addItem("animal pants", 1, ["3*animal pelt", "1*rope"], 0xc0);
 		this.addItem("animal pack", 1, ["4*animal pelt", "1*duct tape"], 0x1260);
@@ -580,7 +607,6 @@ var unturned = {
 					$("#output_foot").html(s).height(200);
 					break;
 			}
-
 		}
 	}
 
