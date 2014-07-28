@@ -270,7 +270,7 @@ var unturned = {
 			var tool = $.isPlainObject(itemName) ? false : unturned.findTool(itemName);
 			var nodeTxt = typeof itemName == "string" ? itemName : itemName.name;
 			var tsz = ctx.measureText(nodeTxt);
-			var content_w = (settings.show_resources && resource_sz > tsz.width) ? resource_sz : tsz.width ;
+			var content_w = (settings.show_resources && resource_sz > Math.floor(tsz.width)) ? resource_sz : Math.floor(tsz.width) ;
 			if (content_w % 2 != 0)
 				content_w++;
 			var sz = {
@@ -282,7 +282,7 @@ var unturned = {
 			if (!tool){
 				mulTxt += multiplier;
 				var msz = ctx.measureText(mulTxt);
-				mulWidth = msz.width + (box_padding * 2) + 1;
+				mulWidth = Math.floor(msz.width) + (box_padding * 2) + 1;
 				sz.w += mulWidth;
 			}
 			var y_join_gap = sz.h / 2;
