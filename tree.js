@@ -81,6 +81,32 @@ var unturned = {
 
 	contexts: [],
 
+	user_settings: {
+		lastVersion: "",	// the last displayed release notes
+		hideSplash: false	// don't show splash
+	},
+	// ------------ utility cookie code
+	// load options from cookie
+	loadSettingsFromCookie: function(){
+		var name = "utcrafter=";
+		var ca = document.cookie.split(";");
+		for(var i = 0; i < ca.length; i++) {
+			var c = ca[i].trim();
+			if (c.indexOf(name) == 0){
+				this.user_settings = $.extend(true, this.user_settings, $.parseJSON(c.substring(name.length,c.length)));
+				break;
+			}
+		}
+	},
+
+	// save options to cookie
+	storeSettingsInCookie: function(){
+		var d = new Date();
+		d.setTime(d.getTime() + ((365)*24*60*60*1000)); // 365 days from now
+		document.cookie = "utcrafter=" + JSON.stringify(this.user_settings) + "; expires=" + d.toGMTString();
+	},
+	// ------------ utility cookie code
+
 	addContextInfo: null,
 
 	setAddContext: function(contextName){

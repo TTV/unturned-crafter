@@ -12,10 +12,18 @@
 	$(function(){
 		// n.b. on the URL, you can specify "unturned.html?language=<code>" to display in another language (supported by translation.js)
 		// e.g. to display spanish would be "unturned.html?language=es"
+		unturned.loadSettingsFromCookie();
 		unturned.translationErrors = "none"; // set to "show" to display untranslated words
 		unturned.setup();
 		$("#unturned_ver").html(unturned.ut_version);
 		$("#utcrafter_ver").html(unturned.version);
+
+		$("#splash_noshow").get(0).checked = unturned.user_settings.hideSplash;
+		if (!unturned.user_settings.lastVersion || (unturned.user_settings.lastVersion != unturned.version) || !unturned.user_settings.hideSplash){
+			unturned.user_settings.lastVersion = unturned.version;
+			unturned.storeSettingsInCookie();
+			$("#splash").show();
+		}
 
 		var $cnt = $("#sel_cnt");
 		for (var c = 2; c < 10; c++)
@@ -69,6 +77,10 @@
 		});
 		$("#splash_close").click(function(){
 			$("#splash").hide();
+		});
+		$("#splash_noshow").click(function(){
+			unturned.user_settings.hideSplash = $(this).get(0).checked;
+			unturned.storeSettingsInCookie();
 		});
 	});
 </script>
@@ -305,8 +317,13 @@ a:hover{
 				TTV
 			</div>
 		</div>
-		<div style="flex-shrink: 0; border-top: 1px solid #eee; text-align: right;">
-		  <a id="splash_close" href="#">Close</a>
+		<div style="flex-shrink: 0; border-top: 1px solid #eee; display: flex">
+		  <div style="flex-grow: 1">
+		    <input type="checkbox" id="splash_noshow" /><label for="splash_noshow">Only show notes for new utcrafter versions</label>
+		  </div>
+		  <div style="flex-shrink: 0">
+		    <a id="splash_close" href="#">Close</a>
+		  </div>
 		</div>
 	</div>
 </div>
