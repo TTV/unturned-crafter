@@ -2,13 +2,6 @@ missing: nato drum.png
 missing: tracer bullets.png
 missing: savage drum.png
 missing: lapua magazine.png
-missing: lapua tracer magazine.png
 missing: full nato drum.png
 missing: full savage drum.png
 missing: full lapua magazine.png
-missing: full lapua tracer magazine.png
-
-missing: tactical light.png
-missing: muffler.png
-missing: zoomomatic.png
-missing: handlamp.png
