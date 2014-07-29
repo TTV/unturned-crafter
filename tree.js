@@ -306,7 +306,7 @@ var unturned = {
 			}
 			ctx.fillText(nodeTxt, pos.x + 1 + box_padding + mulWidth + ((content_w - tsz.width) / 2), pos.y + sz.h - 2 - box_padding - font_height);  // name
 			if (settings.show_resources)
-				ctx.drawImage(images, unturned.itemNameToImageIdx(itemName), 0, resource_sz, resource_sz, pos.x + 1 + box_padding + mulWidth + ((content_w - resource_sz) / 2), pos.y + 1 + box_padding, resource_sz, resource_sz);
+				ctx.drawImage(images, unturned.itemNameToImageIdx(itemName), 0, resource_sz, resource_sz, pos.x + 1 + box_padding + mulWidth + ((content_w - resource_sz) / 2) + 0.5, pos.y + 1 + box_padding + 0.5, resource_sz, resource_sz);
 			// minimum craftsman level
 			if (itm && itm.minlvl){
 				var s = "Level " + itm.minlvl;
@@ -365,8 +365,8 @@ var unturned = {
 			return {w: sz.w, h: yy - pos.y};
 		}
 		var c = $canvas.get(0);
-		c.width = $canvas.width();
-		c.height = $canvas.height();
+//		c.width = $canvas.width();
+//		c.height = $canvas.height();
 		var ctx = c.getContext("2d");
 		ctx.translate(0.5, 0.5);
 		ctx.font = font_height + "px Arial";
@@ -396,7 +396,6 @@ var unturned = {
 			// resize
 			$canvas.attr("width", sz.w);
 			$canvas.attr("height", sz.h);
-			$canvas.width(sz.w).height(sz.h);
 			this.draw($canvas, itemName, itemCnt, settings);
 		}
 	},
