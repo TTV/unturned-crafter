@@ -1,7 +1,7 @@
-missing: nato drum.png
 missing: tracer bullets.png
+
 missing: savage drum.png
 missing: lapua magazine.png
-missing: full nato drum.png
+
 missing: full savage drum.png
 missing: full lapua magazine.png
