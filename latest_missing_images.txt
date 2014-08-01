@@ -1,7 +1,1 @@
 missing: tracer bullets.png
-
-missing: savage drum.png
-missing: lapua magazine.png
-
-missing: full savage drum.png
-missing: full lapua magazine.png
