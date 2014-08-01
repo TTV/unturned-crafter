@@ -2,7 +2,8 @@
 <head>
 <link rel="icon" type="image/png" href="images/favicon.png">
 <title>Unturned Craftin Helper by TTV</title>
-<meta name="keywords" content="Game,Free to Play,Zombies,Survival,Multiplayer,Crafting,Guide">
+<meta name="keywords" content="Unturned,Game,Free to Play,Zombies,Survival,Multiplayer,Crafting,Guide">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="jstree-theme/style.min.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="jstree.min.js" type="text/javascript"></script>
@@ -32,11 +33,11 @@
 
 		$('#explorer')
 			.jstree({
-				'core' : {
-					'data' : unturned.getJStreeStruct()
+				'core': {
+					'data': unturned.getJStreeStruct()
 				},
-				'plugins' : [ 'search' ],
-				'search' : {
+				'plugins': ['search', 'sort'],
+				'search': {
 					show_only_matches: true
 				}
 			})
@@ -199,7 +200,7 @@ a:hover{
 	bottom: 100px;
 	z-index: 1000;
 	background-color: #444;
-	border: 1px solid #000;
+	border: 1px solid #222;
 	font-size: 16px;
 	color: #ccc;
 	-webkit-box-shadow: 4px 4px 5px 0px rgba(50, 50, 50, 0.75);
@@ -312,14 +313,13 @@ a:hover{
 	<div style="display: flex; flex-direction: column; position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
 		<div style="flex-grow: 1; overflow: auto; padding: 8px">
 			<div class="splash-entry-title">
-				Version 1.2.3
+				Version 1.2.4
 			</div>
 			<div class="splash-entry-body">
-				Hi,<br>
-				Nearly got all the images in now :) I think it looks WAY better.<br>
-				You can let me know any suggestions you might have via <a href="https://twitter.com/TTV69" target="_blank">twitter</a><br>
-				Hope you find this guide useful ;-)<br>
-				TTV
+				Grrr,<br>
+				One image left to grab (tracer bullets) which I <i>should</i> be able to randomly grab over the weekend ;-)<br><br>
+				I have alphabetically sorted the categories (and items) but if you think it was better previously, please <a href="https://twitter.com/TTV69" target="_blank">let me know</a> and maybe we do a straw pole if enough folks thought it better previously?<br><br>
+				If you have language skills, I have it all setup internally to allow for translation, just <a href="https://twitter.com/TTV69" target="_blank">get in touch</a> if you would like to help :)
 			</div>
 		</div>
 		<div style="flex-shrink: 0; border-top: 1px solid #eee; display: flex">
