@@ -7,7 +7,7 @@
 
 var unturned = {
 
-	version: "1.2.4",
+	version: "1.3.0",
 	ut_version: "2.2.2",
 
 	language: "en",
