@@ -8,765 +8,206 @@
  * -----------------------------------------
  * Instructions
  * ------------
- * To add a new language, add a property to each item in the format...
- * <language code>: "Translated String"
- * eg. To add the spanish translation to the "fire" entry...
- * {
- *		name: "fire",
- *		en: "Fire",
- *		es: "Fuego"
- * }
- * n.b. It's important to remember to add the COMMA to the end line above your translation ;-)
+ * To add a new language, just create a COPY of the translation_en object and rename to correct country code.
+ * Then replace SECOND string on each line with the translation :)
+ *
+ * eg. Part of a Spanish translation (with first 2 translated items)...
+ * var translation_es = {
+ *		"handsaw": "sierra de mano",
+ *		"fire": "Fuego",
+ *		... 111 more to go ;-)
+ * };
  */
-var translation = {
-	items: [
-		{
-			name: "handsaw",
-			en: "Handsaw"
-		},
-		{
-			name: "fire",
-			en: "Fire"
-		},
-		{
-			name: "pocket knife",
-			en: "Pocket knife"
-		},
-		{
-			name: "supplies",
-			en: "Supplies"
-		},
-		{
-			name: "branch",
-			en: "Branch"
-		},
-		{
-			name: "board",
-			en: "Board"
-		},
-		{
-			name: "log",
-			en: "Log"
-		},
-		{
-			name: "rock",
-			en: "Rock"
-		},
-		{
-			name: "cloth",
-			en: "Cloth"
-		},
-		{
-			name: "construction helmet",
-			en: "Construction helmet"
-		},
-		{
-			name: "torch",
-			en: "Torch"
-		},
-		{
-			name: "raw explosive",
-			en: "Raw explosive"
-		},
-		{
-			name: "fresh carrot",
-			en: "Fresh carrot"
-		},
-		{
-			name: "moldy carrot",
-			en: "Moldy carrot"
-		},
-		{
-			name: "fresh tomato",
-			en: "Fresh tomato"
-		},
-		{
-			name: "moldy tomato",
-			en: "Moldy tomato"
-		},
-		{
-			name: "fresh corn",
-			en: "Fresh corn"
-		},
-		{
-			name: "moldy corn",
-			en: "Moldy corn"
-		},
-		{
-			name: "fresh cabbage",
-			en: "Fresh cabbage"
-		},
-		{
-			name: "moldy cabbage",
-			en: "Moldy cabbage"
-		},
-		{
-			name: "fresh potato",
-			en: "Fresh potato"
-		},
-		{
-			name: "moldy potato",
-			en: "Moldy potato"
-		},
-		{
-			name: "red berry",
-			en: "Red berry"
-		},
-		{
-			name: "blue berry",
-			en: "Blue berry"
-		},
-		{
-			name: "pink berry",
-			en: "Pink berry"
-		},
-		{
-			name: "pale berry",
-			en: "Pale berry"
-		},
-		{
-			name: "green berry",
-			en: "Green berry"
-		},
-		{
-			name: "purple berry",
-			en: "Purple berry"
-		},
-		{
-			name: "purification tablet",
-			en: "Purification tablet"
-		},
-		{
-			name: "moldy bottled water",
-			en: "Moldy bottled water"
-		},
-		{
-			name: "moldy milk",
-			en: "Moldy milk"
-		},
-		{
-			name: "moldy orange juice",
-			en: "Moldy orange juice"
-		},
-		{
-			name: "raw venison",
-			en: "Raw venison"
-		},
-		{
-			name: "raw bacon",
-			en: "Raw bacon"
-		},
-		{
-			name: "battery",
-			en: "Battery"
-		},
-		{
-			name: "hammer",
-			en: "Hammer"
-		},
-		{
-			name: "sledge hammer",
-			en: "Sledge hammer"
-		},
-		{
-			name: "canned cola",
-			en: "Canned cola"
-		},
-		{
-			name: "binocular",
-			en: "Binocular"
-		},
-		{
-			name: "military bullets",
-			en: "Military bullets"
-		},
-		{
-			name: "nato magazine",
-			en: "Nato magazine"
-		},
-		{
-			name: "nato drum",
-			en: "Nato drum"
-		},
-		{
-			name: "civilian bullets",
-			en: "Civilian bullets"
-		},
-		{
-			name: "swift magazine",
-			en: "Swift magazine"
-		},
-		{
-			name: "bonjour clip",
-			en: "Bonjour clip"
-		},
-		{
-			name: "lebel magazine",
-			en: "Lebel magazine"
-		},
-		{
-			name: "tracer bullets",
-			en: "Tracer bullets"
-		},
-		{
-			name: "nato tracer magazine",
-			en: "Nato tracer magazine"
-		},
-		{
-			name: "savage magazine",
-			en: "Savage magazine"
-		},
-		{
-			name: "savage drum",
-			en: "Savage drum"
-		},
-		{
-			name: "winchester clip",
-			en: "Winchester clip"
-		},
-		{
-			name: "lapua magazine",
-			en: "Lapua magazine"
-		},
-		{
-			name: "lapua tracer magazine",
-			en: "Lapua tracer magazine"
-		},
-		{
-			name: "yuri magazine",
-			en: "Yuri magazine"
-		},
-		{
-			name: "xtrmin magazine",
-			en: "Xtrmin magazine"
-		},
-		{
-			name: "pdw magazine",
-			en: "Pdw magazine"
-		},
-		{
-			name: "shells",
-			en: "Shells"
-		},
-		{
-			name: "vitamins",
-			en: "Vitamins"
-		},
-		{
-			name: "stick",
-			en: "Stick"
-		},
-		{
-			name: "nail",
-			en: "Nail"
-		},
-		{
-			name: "scrap metal",
-			en: "Scrap metal"
-		},
-		{
-			name: "bolt",
-			en: "Bolt"
-		},
-		{
-			name: "wood spike",
-			en: "Wood spike"
-		},
-		{
-			name: "stone",
-			en: "Stone"
-		},
-		{
-			name: "animal pelt",
-			en: "Animal pelt"
-		},
-		{
-			name: "wire",
-			en: "Wire"
-		},
-		{
-			name: "rope",
-			en: "Rope"
-		},
-		{
-			name: "duct tape",
-			en: "Duct tape"
-		},
-		{
-			name: "can",
-			en: "Can"
-		},
-		{
-			name: "miner helmet",
-			en: "Miner helmet"
-		},
-		{
-			name: "components",
-			en: "Components"
-		},
-		{
-			name: "wood plate",
-			en: "Wood plate"
-		},
-		{
-			name: "wood support",
-			en: "Wood support"
-		},
-		{
-			name: "wood frame",
-			en: "Wood frame"
-		},
-		{
-			name: "wood cross",
-			en: "Wood cross"
-		},
-		{
-			name: "stone plate",
-			en: "Stone plate"
-		},
-		{
-			name: "stone support",
-			en: "Stone support"
-		},
-		{
-			name: "stone frame",
-			en: "Stone frame"
-		},
-		{
-			name: "stone cross",
-			en: "Stone cross"
-		},
-		{
-			name: "structures",
-			en: "Structures"
-		},
-		{
-			name: "wood foundation",
-			en: "Wood foundation"
-		},
-		{
-			name: "wood wall",
-			en: "Wood wall"
-		},
-		{
-			name: "wood pillar",
-			en: "Wood pillar"
-		},
-		{
-			name: "wood doorway",
-			en: "Wood doorway"
-		},
-		{
-			name: "wood platform",
-			en: "Wood platform"
-		},
-		{
-			name: "wood ramp",
-			en: "Wood ramp"
-		},
-		{
-			name: "greenhouse foundation",
-			en: "Greenhouse foundation"
-		},
-		{
-			name: "fertilizer",
-			en: "Fertilizer"
-		},
-		{
-			name: "greenhouse platform",
-			en: "Greenhouse platform"
-		},
-		{
-			name: "wood hole",
-			en: "Wood hole"
-		},
-		{
-			name: "wood ladder",
-			en: "Wood ladder"
-		},
-		{
-			name: "wood window",
-			en: "Wood window"
-		},
-		{
-			name: "wood post",
-			en: "Wood post"
-		},
-		{
-			name: "wood rampart",
-			en: "Wood rampart"
-		},
-		{
-			name: "stone rampart",
-			en: "Stone rampart"
-		},
-		{
-			name: "stone wall",
-			en: "Stone wall"
-		},
-		{
-			name: "stone post",
-			en: "Stone post"
-		},
-		{
-			name: "stone pillar",
-			en: "Stone pillar"
-		},
-		{
-			name: "stone doorway",
-			en: "Stone doorway"
-		},
-		{
-			name: "stone window",
-			en: "Stone window"
-		},
-		{
-			name: "dock foundation",
-			en: "Dock foundation"
-		},
-		{
-			name: "brazier",
-			en: "Brazier"
-		},
-		{
-			name: "wood garage",
-			en: "Wood garage"
-		},
-		{
-			name: "stone garage",
-			en: "Stone garage"
-		},
-		{
-			name: "barricades",
-			en: "Barricades"
-		},
-		{
-			name: "wood shield",
-			en: "Wood shield"
-		},
-		{
-			name: "wood door",
-			en: "Wood door"
-		},
-		{
-			name: "caltrop",
-			en: "Caltrop"
-		},
-		{
-			name: "barbed wire",
-			en: "Barbed wire"
-		},
-		{
-			name: "wood spike trap",
-			en: "Wood spike trap"
-		},
-		{
-			name: "snare",
-			en: "Snare"
-		},
-		{
-			name: "electric trap",
-			en: "Electric trap"
-		},
-		{
-			name: "campfire",
-			en: "Campfire"
-		},
-		{
-			name: "wood shutter",
-			en: "Wood shutter"
-		},
-		{
-			name: "moab",
-			en: "Moab"
-		},
-		{
-			name: "tripmine",
-			en: "Tripmine"
-		},
-		{
-			name: "landmine",
-			en: "Landmine"
-		},
-		{
-			name: "metal shield",
-			en: "Metal shield"
-		},
-		{
-			name: "electric fence",
-			en: "Electric fence"
-		},
-		{
-			name: "barbed fence",
-			en: "Barbed fence"
-		},
-		{
-			name: "wood gate",
-			en: "Wood gate"
-		},
-		{
-			name: "metal door",
-			en: "Metal door"
-		},
-		{
-			name: "metal shutter",
-			en: "Metal shutter"
-		},
-		{
-			name: "metal gate",
-			en: "Metal gate"
-		},
-		{
-			name: "farming",
-			en: "Farming"
-		},
-		{
-			name: "carrot seed",
-			en: "Carrot seed"
-		},
-		{
-			name: "tomato seed",
-			en: "Tomato seed"
-		},
-		{
-			name: "corn seed",
-			en: "Corn seed"
-		},
-		{
-			name: "cabbage seed",
-			en: "Cabbage seed"
-		},
-		{
-			name: "potato seed",
-			en: "Potato seed"
-		},
-		{
-			name: "storage",
-			en: "Storage"
-		},
-		{
-			name: "crate",
-			en: "Crate"
-		},
-		{
-			name: "chest",
-			en: "Chest"
-		},
-		{
-			name: "metal locker",
-			en: "Metal locker"
-		},
-		{
-			name: "sleeping",
-			en: "Sleeping"
-		},
-		{
-			name: "cot",
-			en: "Cot"
-		},
-		{
-			name: "sleeping bag",
-			en: "Sleeping bag"
-		},
-		{
-			name: "medical",
-			en: "Medical"
-		},
-		{
-			name: "rag",
-			en: "Rag"
-		},
-		{
-			name: "bandage",
-			en: "Bandage"
-		},
-		{
-			name: "dressing",
-			en: "Dressing"
-		},
-		{
-			name: "splint",
-			en: "Splint"
-		},
-		{
-			name: "crushed red berry",
-			en: "Crushed red berry"
-		},
-		{
-			name: "crushed blue berry",
-			en: "Crushed blue berry"
-		},
-		{
-			name: "crushed pink berry",
-			en: "Crushed pink berry"
-		},
-		{
-			name: "crushed pale berry",
-			en: "Crushed pale berry"
-		},
-		{
-			name: "crushed green berry",
-			en: "Crushed green berry"
-		},
-		{
-			name: "crushed purple berry",
-			en: "Crushed purple berry"
-		},
-		{
-			name: "water",
-			en: "Water"
-		},
-		{
-			name: "bottled water",
-			en: "Bottled water"
-		},
-		{
-			name: "milk",
-			en: "Milk"
-		},
-		{
-			name: "orange juice",
-			en: "Orange juice"
-		},
-		{
-			name: "food",
-			en: "Food"
-		},
-		{
-			name: "cooked venison",
-			en: "Cooked venison"
-		},
-		{
-			name: "cooked bacon",
-			en: "Cooked bacon"
-		},
-		{
-			name: "clothing",
-			en: "Clothing"
-		},
-		{
-			name: "animal pants",
-			en: "Animal pants"
-		},
-		{
-			name: "animal shirt",
-			en: "Animal shirt"
-		},
-		{
-			name: "animal pack",
-			en: "Animal pack"
-		},
-		{
-			name: "ammunition",
-			en: "Ammunition"
-		},
-		{
-			name: "full nato magazine",
-			en: "Full nato magazine"
-		},
-		{
-			name: "full nato drum",
-			en: "Full nato drum"
-		},
-		{
-			name: "full swift magazine",
-			en: "Full swift magazine"
-		},
-		{
-			name: "full bonjour clip",
-			en: "Full bonjour clip"
-		},
-		{
-			name: "full lebel magazine",
-			en: "Full lebel magazine"
-		},
-		{
-			name: "full nato tracer magazine",
-			en: "Full nato tracer magazine"
-		},
-		{
-			name: "full savage magazine",
-			en: "Full savage magazine"
-		},
-		{
-			name: "full savage drum",
-			en: "Full savage drum"
-		},
-		{
-			name: "full winchester clip",
-			en: "Full winchester clip"
-		},
-		{
-			name: "full lapua magazine",
-			en: "Full lapua magazine"
-		},
-		{
-			name: "full lapua tracer magazine",
-			en: "Full lapua tracer magazine"
-		},
-		{
-			name: "full yuri magazine",
-			en: "Full yuri magazine"
-		},
-		{
-			name: "full xtrmin magazine",
-			en: "Full xtrmin magazine"
-		},
-		{
-			name: "full pdw magazine",
-			en: "Full pdw magazine"
-		},
-		{
-			name: "arrow",
-			en: "Arrow"
-		},
-		{
-			name: "buckshot",
-			en: "Buckshot"
-		},
-		{
-			name: "slug",
-			en: "Slug"
-		},
-		{
-			name: "attachments",
-			en: "Attachments"
-		},
-		{
-			name: "tactical light",
-			en: "Tactical light"
-		},
-		{
-			name: "handlamp",
-			en: "Handlamp"
-		},
-		{
-			name: "muffler",
-			en: "Muffler"
-		},
-		{
-			name: "zoomomatic",
-			en: "Zoomomatic"
-		},
-		{
-			name: "gear",
-			en: "Gear"
-		},
-		{
-			name: "longbow",
-			en: "Longbow"
-		},
-		{
-			name: "canteen",
-			en: "Canteen"
-		},
-		{
-			name: "frag grenade",
-			en: "Frag grenade"
-		},
-		{
-			name: "car jack",
-			en: "Car jack"
-		}
-	]
+
+// This object is for the top drop-down language selector
+var languages = {"en" : "English"};
+
+var translation_en = {
+	"handsaw": "Handsaw",
+	"fire": "Fire",
+	"pocket knife": "Pocket knife",
+	"supplies": "Supplies",
+	"branch": "Branch",
+	"board": "Board",
+	"log": "Log",
+	"rock": "Rock",
+	"cloth": "Cloth",
+	"construction helmet": "Construction helmet",
+	"torch": "Torch",
+	"raw explosive": "Raw explosive",
+	"fresh carrot": "Fresh carrot",
+	"moldy carrot": "Moldy carrot",
+	"fresh tomato": "Fresh tomato",
+	"moldy tomato": "Moldy tomato",
+	"fresh corn": "Fresh corn",
+	"moldy corn": "Moldy corn",
+	"fresh cabbage": "Fresh cabbage",
+	"moldy cabbage": "Moldy cabbage",
+	"fresh potato": "Fresh potato",
+	"moldy potato": "Moldy potato",
+	"red berry": "Red berry",
+	"blue berry": "Blue berry",
+	"pink berry": "Pink berry",
+	"pale berry": "Pale berry",
+	"green berry": "Green berry",
+	"purple berry": "Purple berry",
+	"purification tablet": "Purification tablet",
+	"moldy bottled water": "Moldy bottled water",
+	"moldy milk": "Moldy milk",
+	"moldy orange juice": "Moldy orange juice",
+	"raw venison": "Raw venison",
+	"raw bacon": "Raw bacon",
+	"battery": "Battery",
+	"hammer": "Hammer",
+	"sledge hammer": "Sledge hammer",
+	"canned cola": "Canned cola",
+	"binocular": "Binocular",
+	"military bullets": "Military bullets",
+	"nato magazine": "Nato magazine",
+	"nato drum": "Nato drum",
+	"civilian bullets": "Civilian bullets",
+	"swift magazine": "Swift magazine",
+	"bonjour clip": "Bonjour clip",
+	"lebel magazine": "Lebel magazine",
+	"tracer bullets": "Tracer bullets",
+	"nato tracer magazine": "Nato tracer magazine",
+	"savage magazine": "Savage magazine",
+	"savage drum": "Savage drum",
+	"winchester clip": "Winchester clip",
+	"lapua magazine": "Lapua magazine",
+	"lapua tracer magazine": "Lapua tracer magazine",
+	"yuri magazine": "Yuri magazine",
+	"xtrmin magazine": "Xtrmin magazine",
+	"pdw magazine": "Pdw magazine",
+	"shells": "Shells",
+	"vitamins": "Vitamins",
+	"stick": "Stick",
+	"nail": "Nail",
+	"scrap metal": "Scrap metal",
+	"bolt": "Bolt",
+	"wood spike": "Wood spike",
+	"stone": "Stone",
+	"animal pelt": "Animal pelt",
+	"wire": "Wire",
+	"rope": "Rope",
+	"duct tape": "Duct tape",
+	"can": "Can",
+	"miner helmet": "Miner helmet",
+	"components": "Components",
+	"wood plate": "Wood plate",
+	"wood support": "Wood support",
+	"wood frame": "Wood frame",
+	"wood cross": "Wood cross",
+	"stone plate": "Stone plate",
+	"stone support": "Stone support",
+	"stone frame": "Stone frame",
+	"stone cross": "Stone cross",
+	"structures": "Structures",
+	"wood foundation": "Wood foundation",
+	"wood wall": "Wood wall",
+	"wood pillar": "Wood pillar",
+	"wood doorway": "Wood doorway",
+	"wood platform": "Wood platform",
+	"wood ramp": "Wood ramp",
+	"greenhouse foundation": "Greenhouse foundation",
+	"fertilizer": "Fertilizer",
+	"greenhouse platform": "Greenhouse platform",
+	"wood hole": "Wood hole",
+	"wood ladder": "Wood ladder",
+	"wood window": "Wood window",
+	"wood post": "Wood post",
+	"wood rampart": "Wood rampart",
+	"stone rampart": "Stone rampart",
+	"stone wall": "Stone wall",
+	"stone post": "Stone post",
+	"stone pillar": "Stone pillar",
+	"stone doorway": "Stone doorway",
+	"stone window": "Stone window",
+	"dock foundation": "Dock foundation",
+	"brazier": "Brazier",
+	"wood garage": "Wood garage",
+	"stone garage": "Stone garage",
+	"barricades": "Barricades",
+	"wood shield": "Wood shield",
+	"wood door": "Wood door",
+	"caltrop": "Caltrop",
+	"barbed wire": "Barbed wire",
+	"wood spike trap": "Wood spike trap",
+	"snare": "Snare",
+	"electric trap": "Electric trap",
+	"campfire": "Campfire",
+	"wood shutter": "Wood shutter",
+	"moab": "Moab",
+	"tripmine": "Tripmine",
+	"landmine": "Landmine",
+	"metal shield": "Metal shield",
+	"electric fence": "Electric fence",
+	"barbed fence": "Barbed fence",
+	"wood gate": "Wood gate",
+	"metal door": "Metal door",
+	"metal shutter": "Metal shutter",
+	"metal gate": "Metal gate",
+	"farming": "Farming",
+	"carrot seed": "Carrot seed",
+	"tomato seed": "Tomato seed",
+	"corn seed": "Corn seed",
+	"cabbage seed": "Cabbage seed",
+	"potato seed": "Potato seed",
+	"storage": "Storage",
+	"crate": "Crate",
+	"chest": "Chest",
+	"metal locker": "Metal locker",
+	"sleeping": "Sleeping",
+	"cot": "Cot",
+	"sleeping bag": "Sleeping bag",
+	"medical": "Medical",
+	"rag": "Rag",
+	"bandage": "Bandage",
+	"dressing": "Dressing",
+	"splint": "Splint",
+	"crushed red berry": "Crushed red berry",
+	"crushed blue berry": "Crushed blue berry",
+	"crushed pink berry": "Crushed pink berry",
+	"crushed pale berry": "Crushed pale berry",
+	"crushed green berry": "Crushed green berry",
+	"crushed purple berry": "Crushed purple berry",
+	"water": "Water",
+	"bottled water": "Bottled water",
+	"milk": "Milk",
+	"orange juice": "Orange juice",
+	"food": "Food",
+	"cooked venison": "Cooked venison",
+	"cooked bacon": "Cooked bacon",
+	"clothing": "Clothing",
+	"animal pants": "Animal pants",
+	"animal shirt": "Animal shirt",
+	"animal pack": "Animal pack",
+	"ammunition": "Ammunition",
+	"full nato magazine": "Full nato magazine",
+	"full nato drum": "Full nato drum",
+	"full swift magazine": "Full swift magazine",
+	"full bonjour clip": "Full bonjour clip",
+	"full lebel magazine": "Full lebel magazine",
+	"full nato tracer magazine": "Full nato tracer magazine",
+	"full savage magazine": "Full savage magazine",
+	"full savage drum": "Full savage drum",
+	"full winchester clip": "Full winchester clip",
+	"full lapua magazine": "Full lapua magazine",
+	"full lapua tracer magazine": "Full lapua tracer magazine",
+	"full yuri magazine": "Full yuri magazine",
+	"full xtrmin magazine": "Full xtrmin magazine",
+	"full pdw magazine": "Full pdw magazine",
+	"arrow": "Arrow",
+	"buckshot": "Buckshot",
+	"slug": "Slug",
+	"attachments": "Attachments",
+	"tactical light": "Tactical light",
+	"handlamp": "Handlamp",
+	"muffler": "Muffler",
+	"zoomomatic": "Zoomomatic",
+	"gear": "Gear",
+	"longbow": "Longbow",
+	"canteen": "Canteen",
+	"frag grenade": "Frag grenade",
+	"car jack": "Car jack"
 };

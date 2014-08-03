@@ -83,6 +83,17 @@
 			unturned.user_settings.hideSplash = $(this).get(0).checked;
 			unturned.storeSettingsInCookie();
 		});
+
+		for (var p in languages)
+			$("<option></option")
+				.attr("value", p)
+				.text(languages[p])
+				.appendTo($("#lang"));
+		$("#lang")
+			.val(unturned.language)
+			.change(function(){
+				document.location = "unturned.html?language=" + $(this).val();
+			});
 	});
 </script>
 <script>
@@ -181,6 +192,7 @@ a:hover{
 	background-color: rgb(48, 81, 38);
 	color: #fff;
 	padding: 4px;
+	text-align: right;
 	flex-shrink: 0;
 }
 .footer{
@@ -235,14 +247,14 @@ a:hover{
 	<div class="unturn_header">
 		<a id="logo_click" href="#"><img src="images/logo.jpg"></a>
 		<div class="unturn_header_txt">
-			Crafting Helper V<span id="utcrafter_ver">0.0</span> by <a href="https://twitter.com/TTV69" target="_blank">@TTV69</a> with help from <a href="https://twitter.com/oMoike_">@oMoike_</a><br />
-			For Unturned V<span id="unturned_ver">0.0</span> (a most excellent game)<br />
+			Crafting Helper V<span id="utcrafter_ver">0.0</span> by <a href="https://twitter.com/TTV69" target="_blank">@TTV69</a><br />
+			For Unturned V<span id="unturned_ver">0.0</span><br />
 			<a href="#" id="splash_view" style="font-size: 65%">View crafting helper release notes</a>
 		</div>
 		<div class="unturn_header_blurb">
+			Language: <select id="lang"></select><br />
 			N.b. You need a mordern browser for this to work<br />
-			IE9 or higher<br />
-			Chrome, FF, Safari (just auto-update)
+			(IE9+, Chrome, FF, Safari)
 		</div>
 		<div style="clear:both"></div>
 	</div>
@@ -254,7 +266,7 @@ a:hover{
 			<div id="explorer"></div>
 			<div class="qty_div">
 				Build how many: <select id="sel_cnt"><option value="1">1</option></select>
-				<input type="checkbox" id="show_imgs" checked><label for="show_imgs">Show Images</label>
+				<!-- <input type="checkbox" id="show_imgs" checked><label for="show_imgs">Show Images</label> -->
 			</div>
 		</div>
 		<div id="contents">
@@ -311,15 +323,25 @@ a:hover{
 </div>
 <div id="splash" style="display: none">
 	<div style="display: flex; flex-direction: column; position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
-		<div style="flex-grow: 1; overflow: auto; padding: 8px">
-			<div class="splash-entry-title">
-				Version 1.2.4
+		<div style="flex-grow: 1; padding: 8px; display: flex">
+			<div style="flex-grow: 1; overflow: auto; ">
+				<div class="splash-entry-title">
+					Version 1.2.4
+				</div>
+				<div class="splash-entry-body">
+					Grrr,<br>
+					One image left to grab (tracer bullets) which I <i>should</i> be able to randomly grab over the weekend ;-)<br><br>
+					I have alphabetically sorted the categories (and items) but if you think it was better previously, please <a href="https://twitter.com/TTV69" target="_blank">let me know</a> and maybe we do a straw pole if enough folks thought it better previously?<br><br>
+					If you have language skills, I have it all setup internally to allow for translation, just <a href="https://twitter.com/TTV69" target="_blank">get in touch</a> if you would like to help :)
+				</div>
 			</div>
-			<div class="splash-entry-body">
-				Grrr,<br>
-				One image left to grab (tracer bullets) which I <i>should</i> be able to randomly grab over the weekend ;-)<br><br>
-				I have alphabetically sorted the categories (and items) but if you think it was better previously, please <a href="https://twitter.com/TTV69" target="_blank">let me know</a> and maybe we do a straw pole if enough folks thought it better previously?<br><br>
-				If you have language skills, I have it all setup internally to allow for translation, just <a href="https://twitter.com/TTV69" target="_blank">get in touch</a> if you would like to help :)
+			<div style="overflow: auto; flex-shrink: 0; background-color: rgba(0, 0, 0, 0.5)">
+				<div class="splash-entry-title">
+					Contributors
+				</div>
+				<div class="splash-entry-body" style="padding-left: 4px;">
+					<a href="https://twitter.com/oMoike_">@oMoike_</a><br />
+				</div>
 			</div>
 		</div>
 		<div style="flex-shrink: 0; border-top: 1px solid #eee; display: flex">
