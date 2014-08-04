@@ -28,9 +28,11 @@
 		}
 
 		var $cnt = $("#sel_cnt");
+		/*
 		for (var c = 2; c < 10; c++)
 			$("<option value='" + c + "'>" + c + "</option>")
 				.appendTo($cnt);
+		*/
 
 		$('#explorer')
 			.jstree({
@@ -49,6 +51,12 @@
 				var itm_name = selArr[0];
 				if (unturned.findItem(itm_name)){
 					var itm_cnt = parseInt($cnt.val(), 10);
+					$cnt.removeClass("bad-amount");
+					if (isNaN(itm_cnt)){
+						$cnt.addClass("bad-amount");
+						itm_cnt = 1;
+					}
+					$("#output").attr("width", 50).attr("height", 50);
 					unturned.draw($("#output"), itm_name, itm_cnt, {show_resources: $("#show_imgs").is(":checked")});
 				} else {
 					$('#explorer').jstree('toggle_node', itm_name);
@@ -240,6 +248,18 @@ a:hover{
 	border-bottom: 1px solid #eee;
 	margin-bottom: 4px;
 }
+#sel_cnt{
+	box-shadow: inset 0 0 4px #eee;
+	padding: 6px 6px 6px 6px;
+	border-radius: 4px;
+	border: 1px solid silver;
+	font-size: 1.1em;
+	background-color: #fff;
+	width: 50px;
+}
+.bad-amount{
+	border-color: #f00;
+}
 </style>
 </head>
 <body>
@@ -266,7 +286,7 @@ a:hover{
 			</div>
 			<div id="explorer"></div>
 			<div class="qty_div">
-				Build how many: <select id="sel_cnt"><option value="1">1</option></select>
+				Build how many: <input id="sel_cnt" value="1" />
 				<input type="checkbox" id="show_imgs" style="display: none" checked><label for="show_imgs" style="display: none">Show Images</label>
 			</div>
 		</div>
@@ -342,6 +362,7 @@ a:hover{
 				<div class="splash-entry-body" style="padding: 0 4px;">
 					<a href="https://twitter.com/oMoike_">@oMoike_</a><br />
 					<a href="https://twitter.com/Pedro_Palhari">@Pedro_Palhari</a><br />
+					<a href="https://twitter.com/master0">@master0</a><br />
 				</div>
 			</div>
 		</div>

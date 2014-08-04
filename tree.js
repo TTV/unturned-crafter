@@ -391,6 +391,8 @@ var unturned = {
 			// resize
 			$canvas.attr("width", sz.w);
 			$canvas.attr("height", sz.h);
+			ctx.fillStyle = "rgb(132, 159, 170)";
+			ctx.fillRect(-1, -1, $canvas.width() + 2, $canvas.height() + 2);
 			this.draw($canvas, itemName, itemCnt, settings);
 		}
 	},
