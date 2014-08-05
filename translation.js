@@ -974,7 +974,7 @@ var translation_fr = {
 	"arrow": "Flèche",
 	"buckshot": "Chevrotine",
 	"slug": "Balle de pistolet",
-	"attachments": "Équipements",
+	"attachments": "Pièces jointes",
 	"tactical light": "Lampe tactique",
 	"handlamp": "Lampe de poche",
 	"muffler": "Silencieux",
