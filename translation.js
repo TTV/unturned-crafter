@@ -179,7 +179,7 @@ var translation_en = {
 	"animal pants": "Animal pants",
 	"animal shirt": "Animal shirt",
 	"animal pack": "Animal pack",
-	"ammunition": "Ammunition",
+	"ammunition": "Amunicja",
 	"full nato magazine": "Full nato magazine",
 	"full nato drum": "Full nato drum",
 	"full swift magazine": "Full swift magazine",
@@ -1183,6 +1183,7 @@ var translation_ru = {
 };
 
 //-----------
+// Polish
 // Nick - Amazur
 // Skype - Mike_Billiam 
 var translation_pl = {
