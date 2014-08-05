@@ -935,7 +935,7 @@ var translation_fr = {
 	"cot": "Lit de bébé",
 	"sleeping bag": "Sac de couchage",
 	"medical": "Médical",
-	"rag": "Chiffon",
+	"rag": "Petit chiffon",
 	"bandage": "Bandage",
 	"dressing": "Dressing",
 	"splint": "Attelle",
