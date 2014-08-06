@@ -1,4 +1,4 @@
-/* -----------------------------------------
+﻿/* -----------------------------------------
  * UnTurned Crafting helper translation file
  * -----------------------------------------
   * Instructions
@@ -901,7 +901,7 @@ var translation_fr = {
 	"brazier": "Torche",
 	"wood garage": "Garage en bois",
 	"stone garage": "Garage en pierre",
-	"barricades": "Barricade",
+	"barricades": "Défenses",
 	"wood shield": "Bouclier en bois",
 	"wood door": "Porte en bois",
 	"caltrop": "Makibishi",
@@ -945,11 +945,11 @@ var translation_fr = {
 	"crushed pale berry": "Baies pâles écrasées",
 	"crushed green berry": "Baies vertes écrasées",
 	"crushed purple berry": "Baies violettes écrasées",
-	"water": "Eau",
+	"water": "Boissons",
 	"bottled water": "Bouteille d'eau",
 	"milk": "Lait",
 	"orange juice": "Jus d'orange",
-	"food": "Alimentation",
+	"food": "Nourritures",
 	"cooked venison": "Chevreuil cuit",
 	"cooked bacon": "Bacon cuit",
 	"clothing": "Vêtements",
