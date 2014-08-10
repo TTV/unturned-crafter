@@ -7,8 +7,8 @@
 
 var unturned = {
 
-	version: "1.2.4",
-	ut_version: "2.2.0",
+	version: "1.3.1",
+	ut_version: "2.2.3",
 
 	language: "en",
 	translationErrors: "none",
@@ -176,16 +176,13 @@ var unturned = {
 	untranslated: [],
 
 	translate: function(enString){
-		for (var c = 0; c < translation.items.length; c++)
-			if (translation.items[c].name == enString){
-				if (translation.items[c].hasOwnProperty(this.language))
-					return translation.items[c][this.language];
-				// valid term but unsupported language!
-				if ($.inArray(enString, this.untranslated) == -1)
-					this.untranslated.push(enString);
-				return enString;
-			}
-		// unknown term
+		if ($.isPlainObject(window["translation_" + this.language])){
+			// found the translation object for the current language :)
+			var tran_tbl = window["translation_" + this.language];
+			if (tran_tbl.hasOwnProperty(enString))
+				return tran_tbl[enString];
+		}
+		// unknown expression / language
 		if ($.inArray(enString, this.untranslated) == -1)
 			this.untranslated.push(enString);
 		return enString;
@@ -365,8 +362,6 @@ var unturned = {
 			return {w: sz.w, h: yy - pos.y};
 		}
 		var c = $canvas.get(0);
-//		c.width = $canvas.width();
-//		c.height = $canvas.height();
 		var ctx = c.getContext("2d");
 		ctx.translate(0.5, 0.5);
 		ctx.font = font_height + "px Arial";
@@ -396,6 +391,8 @@ var unturned = {
 			// resize
 			$canvas.attr("width", sz.w);
 			$canvas.attr("height", sz.h);
+			ctx.fillStyle = "rgb(132, 159, 170)";
+			ctx.fillRect(-1, -1, $canvas.width() + 2, $canvas.height() + 2);
 			this.draw($canvas, itemName, itemCnt, settings);
 		}
 	},
@@ -420,7 +417,7 @@ var unturned = {
 		// rip language from url
 		var query = window.location.search.substring(1);
 		var vars = query.split("&");
-		for (var c = 0; c < vars.length; c++) {
+		for (c = 0; c < vars.length; c++) {
     		var pair = vars[c].split("=");
 			if (pair[0].toLowerCase() == "language")
 				this.language = $.trim(pair[1].toLowerCase());
@@ -432,7 +429,7 @@ var unturned = {
 			this.atomic[c].name = this.translate(this.atomic[c].name);
 		// from  http://unturned-bunker.wikia.com/wiki/Crafting_Recipes
 		// any source item (tool or element) without a constuctor must be atomic (log, branch, rock, cloth, can, construction helmet, torch etc.)
-		// todo : some items can also be sporned (stick, board, nail, bolt)
+		// todo : some items can also be sporned (stick, board, nail, bolt, can, scrap metal, rope, wire, duct tape)
 		//supplies
 		this.setAddContext("supplies");
 		this.addItem("board", 4, ["1*log"], 0x740); // 4 boards = 1 log
@@ -596,13 +593,11 @@ var unturned = {
 					$("#output_foot").html(s).height(200);
 					break;
 				case "code":
-					s = "var translation = {\n" +
-						"\titems: [\n";
+					s = "var translation_en = {\n";
 					for (c = 0; c < this.untranslated.length; c++)
-						s += "\t\t{\n\t\t\tname: \"" + this.untranslated[c] + "\",\n" +
-							"\t\t\ten: \"" + this.untranslated[c].substr(0, 1).toUpperCase() + this.untranslated[c].substr(1) + "\"\n" +
-							"\t\t},\n";
-					s += "\t]\n};";
+						s += "\t\"" + this.untranslated[c] + "\", " +
+							"\"" + this.untranslated[c].substr(0, 1).toUpperCase() + this.untranslated[c].substr(1) + "\"" + (c < this.untranslated.length - 1 ? "," : "") + "\n";
+					s += "};";
 					$("#output_foot").html(s).height(200);
 					break;
 			}
