@@ -880,7 +880,7 @@ var translation_fr = {
 	"wood foundation": "Fondation en bois",
 	"wood wall": "Mur en bois",
 	"wood pillar": "Pillier en bois",
-	"wood doorway": "Porte en bois",
+	"wood doorway": "Contour de porte en bois",
 	"wood platform": "Plate-forme en bois",
 	"wood ramp": "Rampe en bois",
 	"greenhouse foundation": "Fondation de potager",
