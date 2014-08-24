@@ -895,7 +895,7 @@ var translation_fr = {
 	"stone wall": "Mur en pierre",
 	"stone post": "Poteau en pierre",
 	"stone pillar": "Pillier en pierre",
-	"stone doorway": "Porte en pierre",
+	"stone doorway": "Contour de porte en pierre",
 	"stone window": "Fenêtre en pierre",
 	"dock foundation": "Fondation du quai",
 	"brazier": "Torche",
