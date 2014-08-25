@@ -1830,7 +1830,7 @@ var translation_hr = {
 	"scrap metal": "staro željezo",
 	"bolt": "vijak",
 	"wood spike": "drveni šiljci",
-	"stone": "kamen",
+	"stone": "kamena",
 	"animal pelt": "životinjska koža",
 	"wire": "žica",
 	"rope": "uže",
