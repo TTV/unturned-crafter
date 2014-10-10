@@ -15,7 +15,7 @@
  */
 
 // This object is for the top drop-down language selector
-var languages = {"hr": "Croatian", "en": "English", "fn": "Finnish", "fr": "French", "de": "German", "gr": "GreeK", "he": "Hebrew", "pl": "Polish", "br": "Portuguese (Brazilian)", "ru": "Russian" , "es": "Spanish", "ua": "Ukrainian", "vi": "Vietnamese"};
+var languages = {"hr": "Croatian", "en": "English", "fn": "Finnish", "fr": "French", "de": "German", "gr": "Greek", "he": "Hebrew", "pl": "Polish", "br": "Portuguese (Brazilian)", "ru": "Russian" , "es": "Spanish", "ua": "Ukrainian", "vi": "Vietnamese"};
 
 //-----------------
 // English : @TTV69
